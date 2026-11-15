@@ -1,0 +1,1408 @@
+[
+  {
+    "file": "providers/wekmed/filmmodu.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/filmmodu.js",
+    "origin_id": "filmmodu",
+    "origin_version": "1.0.0",
+    "originalSha256": "b2d059252d34a79931bbc511772661e2f2dff407c28a24fd2915b2e69d72ad7e",
+    "vendoredSha256": "9ad5661e3c22299c058b34fa9a558d47df8b16231c0422b101d55f5407113cf5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/filmmakinesi.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/filmmakinesi.js",
+    "origin_id": "filmmakinesi",
+    "origin_version": "1.0.1",
+    "originalSha256": "27b7f4e92c56cf02350c5a209197d7ee4da0c43dfbbe89417f1a31af2fd8293b",
+    "vendoredSha256": "4fef27e4c65c93f4f5c066641293959bcedcf74d1123b8deab0fe70ebb2235ec",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/hdfilmcehennemi.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/hdfilmcehennemi.js",
+    "origin_id": "hdfilmcehennemi",
+    "origin_version": "1.0.0",
+    "originalSha256": "2c20a5854bff7c230b600b63ae3d26f78d3b5a1ec4a2f42c488e3e1305742f3e",
+    "vendoredSha256": "08d055547898277aadbd632bac422fd966d2ae4fe3647e081f68ce4d448ffb8c",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/filmekseni.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/filmekseni.js",
+    "origin_id": "filmekseni",
+    "origin_version": "1.0.0",
+    "originalSha256": "73d537ae49aafc446a4b803c3621e18126040e778fc9952a8d2d2b410501dcfd",
+    "vendoredSha256": "56005805e0d9f3c7c083d5bc0ae7d7f208068d6cd5528c6b77752dee88619dfe",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/m3u_provider.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/m3u_provider.js",
+    "origin_id": "m3u_provider",
+    "origin_version": "1.0.0",
+    "originalSha256": "a9980334d52f1cf2cc82af1cbf83d2654c902ed5dd78e4cdaf179b6b2241cc23",
+    "vendoredSha256": "b04987f47932a4469c5095d44d4fd472585a8cae83be65f554cf6a02be7421a5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/jetfilmizle.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/jetfilmizle.js",
+    "origin_id": "jetfilmizle",
+    "origin_version": "1.0.0",
+    "originalSha256": "54a920ebb218de701a3766ace05fe7546b2ee70ee74cf9f756558949b170c3b1",
+    "vendoredSha256": "7ff900f2c5dbc3f8c5aa19dc5c443c7e7dd5e71ac4befe8a976562f12cd644f9",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/webteizle.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/webteizle.js",
+    "origin_id": "webteizle",
+    "origin_version": "1.0.0",
+    "originalSha256": "49ddf042e188d7e7577c4707a5b6973de5b3022d3dc614c3770f41507a15debd",
+    "vendoredSha256": "955b58adb0f8e007d9532d638d680f50dc7208cba235b1a5ad6573f2d3684c12",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/sezonlukdizi.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/sezonlukdizi.js",
+    "origin_id": "sezonlukdizi",
+    "origin_version": "1.0.0",
+    "originalSha256": "403f31efac286982d5babf32551f38f9ed38200903d59190c76e2a857855745c",
+    "vendoredSha256": "247fbd2c0cc6580a3944ca1be18f0ae94fd41a78a8e418c135a95cbb4b174348",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/fullhdfilmizlesene.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/fullhdfilmizlesene.js",
+    "origin_id": "fullhdfilmizlesene",
+    "origin_version": "1.0.0",
+    "originalSha256": "e221975016b50482d5b425f32b3f130ffb70920e0276d31c46e27293d667579b",
+    "vendoredSha256": "a71d1b4eeb9fc0be31122abfbf68c6cac57de614454b07870dd3796c3e982d4f",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/cizgimax.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/cizgimax.js",
+    "origin_id": "cizgimax",
+    "origin_version": "1.0.0",
+    "originalSha256": "7c022fee8781cf9dabbbd744aebc72694e0389b9a83ddc07798373ad2661f067",
+    "vendoredSha256": "e78396f9fd04433f1ef39f42baef8326b202c8dc72a2f56c9fbeacc68f8e86fb",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "cizgimax-dizi-slug-path"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/cizgivedizi.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/cizgivedizi.js",
+    "origin_id": "cizgivedizi",
+    "origin_version": "1.1.0",
+    "originalSha256": "9e089c14faa4408e724fc79e4388d2dfc37191721177b8cab76b424e2679956b",
+    "vendoredSha256": "dae0fb6ffc7f02509d5f753a28ddee66207685bf778e63f028fd12fe92185a77",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/sinewix.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/sinewix.js",
+    "origin_id": "sinewix",
+    "origin_version": "1.0.0",
+    "originalSha256": "d778207af2d7cdcc8322235978f61711065ebcdb5e8526d38b6c050ebcc44c27",
+    "vendoredSha256": "cc59129cad4d70a43cc78cd7e503760bf59e5ad5fff836a6c9f4114f950bba43",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/dizilife.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/dizilife.js",
+    "origin_id": "dizilife",
+    "origin_version": "1.0.0",
+    "originalSha256": "40b695483eeba7b13fc17b160a23ea6fa2e31a22955fdacf591625cb551b2223",
+    "vendoredSha256": "96e7c31e9524db8291e107d3eb4d192c172edfe79634291f5bd7221c74afb3dd",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/wekmed/diziyou.js",
+    "origin_repo": "Wekmed/nuvio",
+    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
+    "origin_path": "providers/diziyou.js",
+    "origin_id": "diziyou",
+    "origin_version": "1.0.0",
+    "originalSha256": "8fda72c358f800c683e516f4548e83442413e05e0eeb6b2396d12aa5245fbc69",
+    "vendoredSha256": "6caa471ae5ada46042bdc51d3cf3d9132a2db32ac8d6c5063db9fa101921b2d1",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/anthology/anthology_m3u.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_m3u.js",
+    "origin_id": "anthology_m3u",
+    "origin_version": "1.8.39",
+    "originalSha256": "7d73da32bb7b62ba6dbac74815b40249e3ea4d0df027f64993739e198855605f",
+    "vendoredSha256": "4a36a1438adcd6d98df20359122cd2b20f0508b83bddb4f413615bebd4c5683e",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/liderfilmizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/liderfilmizle.js",
+    "origin_id": "liderfilmizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "588329dc71350c0286ee1536f1c45522150e4b09e7af5d7be7a475d76791b574",
+    "vendoredSha256": "6d057f415c5c34a3da055735b2103dc2ea333a6b48723c8452b12e6ffcf24077",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/youtube_dizifilm.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/youtube_dizifilm.js",
+    "origin_id": "youtube_dizifilm",
+    "origin_version": "1.8.39",
+    "originalSha256": "d4580b6e3e78d63367497c2f62f4e124423d7a5d58967ec238e40ab636d762c1",
+    "vendoredSha256": "e13d7983070a64b40b72ce99b62e3bbb2dd29e29c57d73dc008f571cf4593bb8",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "tmdb-remote-config-key-ignored",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/sinewix.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/sinewix.js",
+    "origin_id": "sinewix",
+    "origin_version": "1.8.39",
+    "originalSha256": "ee58ff6a74361a9f91cd86202e20efe976ceabe39980caf7e2d0e7c86be2d1c6",
+    "vendoredSha256": "481a019dd899a067084ea5db42f91a44e61dd71e36cdd236cbf75ce07ae30e8d",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/vidlink.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/vidlink.js",
+    "origin_id": "vidlink",
+    "origin_version": "1.8.39",
+    "originalSha256": "a8d4d7e0499e8f21809aecc07f1bb1ba4e6a81e1e8d7c07290c3cffcd8bcbd02",
+    "vendoredSha256": "27beae1a4b141360d27407d8dc0e72c012f2e49f674242b98199bcb886d1f2bc",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/dizibak.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/dizibak.js",
+    "origin_id": "dizibak",
+    "origin_version": "1.8.39",
+    "originalSha256": "b5dd2fe086b554311b135fd771649af9922c9832a01ca348af87c8233a1189ee",
+    "vendoredSha256": "0312850eef7a20c292e94a3744d9570846add863c60686752208476cec33d129",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/M3U/ListM3u.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/M3U/ListM3u.js",
+    "origin_id": "m3u.anthology.addon",
+    "origin_version": "1.8.39",
+    "originalSha256": "a25b75a930e1b3a3bebb391c8216a080f5642ce8e50d6b3b1731f8758098e71b",
+    "vendoredSha256": "a25b75a930e1b3a3bebb391c8216a080f5642ce8e50d6b3b1731f8758098e71b",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/filmmodu.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/filmmodu.js",
+    "origin_id": "filmmodu",
+    "origin_version": "1.8.39",
+    "originalSha256": "3f17c938b92134808dd9fb3d11725508d6c95bccfda618785c8403df2a6a9edf",
+    "vendoredSha256": "0ffce586c57ddeda9ecd27207e9acef5ea8b02e47f0d9d5170d08662bc0c92e1",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/hdfilmcehennemi.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/hdfilmcehennemi.js",
+    "origin_id": "hdfilmcehennemi",
+    "origin_version": "1.8.39",
+    "originalSha256": "091ecf3e5e6c8faf28f7ff3d9475ced191309cf58f9d7deae070ea14ca9536f6",
+    "vendoredSha256": "84ae7ee66bcc3f6a2813a20dcdeb8d772aea33b088c463f47a03f9937a2873af",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/diziyou.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/diziyou.js",
+    "origin_id": "diziyou",
+    "origin_version": "1.8.39",
+    "originalSha256": "4290d83a70108dfe93698388310417f4f0e1a766a7c94b07dec700c072564849",
+    "vendoredSha256": "992747efb6cd619e6f13ff8d405a2a8ca3cc1a2715b67945d926d8f60bdbcf2f",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/dizipod.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/dizipod.js",
+    "origin_id": "dizipod",
+    "origin_version": "1.8.39",
+    "originalSha256": "c57b28a3fbcadfacc2681dafeff3d5d9e3701037c34fa7042910dd34604b0019",
+    "vendoredSha256": "d6fe0e73b401c1aa220ed8ef37772729ac12687ba382b7475e253603d14e14f2",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/sinemacx.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/sinemacx.js",
+    "origin_id": "sinemacx",
+    "origin_version": "1.8.39",
+    "originalSha256": "09d032371299641c3eb37d3aa2b1406cf1ebcc9b13cae9c635c4ebbdec6fb822",
+    "vendoredSha256": "663227f77dbc408fcc241ae794e3fedda618b38963f772c029c7999372463c12",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/animecix.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/animecix.js",
+    "origin_id": "animecix",
+    "origin_version": "1.8.39",
+    "originalSha256": "76b8e877164285d401dcf1cd7c21efb6e13bc17496be302f837586f4cb7841eb",
+    "vendoredSha256": "69a8c75c6fcf0783b43c4a8ac8f28ee6ca72c907488384559299f12f64b5bde1",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anizm.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anizm.js",
+    "origin_id": "anizm",
+    "origin_version": "1.8.39",
+    "originalSha256": "8809643d58279594551aef445f80ef32c7094faae0889ea30333e2a0f2282d44",
+    "vendoredSha256": "c37cb7ac8b99407516b4b7bb54552519f97872fbc332c055652a5ab56ac463a4",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/animom.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/animom.js",
+    "origin_id": "animom",
+    "origin_version": "1.8.39",
+    "originalSha256": "3703215e1fe97b900db35cb75381d3e6dcd03db784aec82e110efbcb73ec74a8",
+    "vendoredSha256": "7df5a55635e072043164572c10ac2da87710b5ceb1c2e276bbc9775c5cedf65e",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/animeprax.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/animeprax.js",
+    "origin_id": "animeprax",
+    "origin_version": "1.8.39",
+    "originalSha256": "f5eb4fb690d0fef11dc71c10befdfa2372b1988212a06aa004152afff4943cdf",
+    "vendoredSha256": "55426a8861f347ec7dfe7b7bf99941e1942aaef775b370b489b640805eba5d07",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anizium.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anizium.js",
+    "origin_id": "anizium",
+    "origin_version": "1.8.39",
+    "originalSha256": "2b9f7eeb553c9c85621a20ff3c067c0879b794190a1d8e3e28ad40e41b652c0c",
+    "vendoredSha256": "7c5bbf17f9b2afe52414b1471e4e6785974bc75067f54c50444aad7a8c589bd7",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/asyaanimeleri.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/asyaanimeleri.js",
+    "origin_id": "asyaanimeleri",
+    "origin_version": "1.8.39",
+    "originalSha256": "8e814c5210348cb89bb33760d1cf60682018f8d0ff45dedba1ab844653f1de2a",
+    "vendoredSha256": "c8b232908a666774e728b003923b624177faf18b31dc0b221ee7d7597c6eaaea",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/sonanime.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/sonanime.js",
+    "origin_id": "sonanime",
+    "origin_version": "1.8.39",
+    "originalSha256": "c321c4997136e32c24d5d2464989718f16ebc022693dc1c4d379bc97a965f3b4",
+    "vendoredSha256": "fd0f0d53a38eff67e42c6c407dd6bca144004d55c76c51938ac7034aeebfebed",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/diziboxizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/diziboxizle.js",
+    "origin_id": "diziboxizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "e44a65b0ce13350aa9cd840cca0dbfbeeac608c6be565c2750b8f318d564a18d",
+    "vendoredSha256": "00a40044fa1702017250e2681d8c7468ef5367a9fae45f574c3effff86350dd5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_spor.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_spor.js",
+    "origin_id": "anthology_spor",
+    "origin_version": "1.8.39",
+    "originalSha256": "9a3e9ed5042c28fe028a51d4b91406f55f2949a224a7b68040592d9281f6b832",
+    "vendoredSha256": "d5c2f4126b2376563d7db87b25e712562829c60f926f594fc116880d6aa54d73",
+    "modified": true,
+    "modifications": [
+      "node-require-guarded"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_haber.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_haber.js",
+    "origin_id": "anthology_haber",
+    "origin_version": "1.8.39",
+    "originalSha256": "a7b1bb96813b3f5ca6cf8a3ba013d91279da8eb7db462f6a2f6f73d0dc83bde2",
+    "vendoredSha256": "a7b1bb96813b3f5ca6cf8a3ba013d91279da8eb7db462f6a2f6f73d0dc83bde2",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_ulusal.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_ulusal.js",
+    "origin_id": "anthology_ulusal",
+    "origin_version": "1.8.39",
+    "originalSha256": "3b6b1a84f6b8b7abd45a383b86cda7a9e7c7232208e1ace07c7e9a351a37f6cd",
+    "vendoredSha256": "3b6b1a84f6b8b7abd45a383b86cda7a9e7c7232208e1ace07c7e9a351a37f6cd",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/ddizi.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/ddizi.js",
+    "origin_id": "ddizi",
+    "origin_version": "1.8.39",
+    "originalSha256": "9c2d8596144094954a9c523caedc93ff452055e4904cbdb305ad899c3633e472",
+    "vendoredSha256": "36cc9668ff882898f808b777af57425191f6ac40e38020cf5ee4db8a76131f98",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/ddizibox.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/ddizibox.js",
+    "origin_id": "ddizibox",
+    "origin_version": "1.8.39",
+    "originalSha256": "4207861f2c884646622dbb7316ec49ac76fa6bc70ad623d48da44dffa3fa3e8a",
+    "vendoredSha256": "4171c1dd9cb2a4a253c2687b537ea27bb7f79128a789138c448c7d5c489f9bf5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/dizimom.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/dizimom.js",
+    "origin_id": "dizimom",
+    "origin_version": "1.8.39",
+    "originalSha256": "127ff4f63ad0080f31c08c480be66f19afeec555ff6a50e8cbfab7fd5f565205",
+    "vendoredSha256": "9bfaad26481e0ffb9a5064e9fd3367e6a272e07bb35aadc6e06e8cf6dc187be0",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/vidmody.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/vidmody.js",
+    "origin_id": "vidmody",
+    "origin_version": "1.8.39",
+    "originalSha256": "b8c9be416b3afe526403bb0c3b0210bb4f35e5450043c5c6795f5c87dfad7898",
+    "vendoredSha256": "024702b8d165e6b969130036735bb60cfb4e67c0393e032ffb71ecb995057381",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/webteizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/webteizle.js",
+    "origin_id": "webteizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "d9216023016223bdc43be6416c1becb18d8395766090dc929b77dbd94df5b8cb",
+    "vendoredSha256": "cc4175a9f0136f4287059b6e3076f712690bc138b14665a423649b3705939d31",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/yabancidizi.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/yabancidizi.js",
+    "origin_id": "yabancidizi",
+    "origin_version": "1.8.39",
+    "originalSha256": "e6966a0f80234193a7da6979fa8bc105ce37915a2e3c0e2a8270bbd6de2da110",
+    "vendoredSha256": "2cc6be072bea6c97afe92c80e93be22e07dd852c7df7abdbafb5c46c6e934f71",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/tvdiziler.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/tvdiziler.js",
+    "origin_id": "tvdiziler",
+    "origin_version": "1.8.39",
+    "originalSha256": "a71faf7f1c2f6c31d82691ad94bb94f21d88bd76c9e7cae4d291540fef9d4120",
+    "vendoredSha256": "89b6db732f5e02799f4032be06577036a165db9a28a5a7f8b500ce55424b9fdd",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/setfilmizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/setfilmizle.js",
+    "origin_id": "setfilmizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "636b9e7d50659c18d1dee485b749036c29d8eb25d5dbde24c37d26a10d5a9334",
+    "vendoredSha256": "4b1f225b046614c44e00f78be1a21d04b0d2603e7f7974cd21fd279747966420",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/kultfilmler.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/kultfilmler.js",
+    "origin_id": "kultfilmler",
+    "origin_version": "1.8.39",
+    "originalSha256": "f3e45726b6880c8833f387d7b8255da84b05b2e548bd7248ae0c0b3f1c8b7b8f",
+    "vendoredSha256": "f2415980b433d2de039e67ce8280a2eab256e25fe7e0f02ac29642c472b58db5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/hdfilmdelisi.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/hdfilmdelisi.js",
+    "origin_id": "hdfilmdelisi",
+    "origin_version": "1.8.39",
+    "originalSha256": "f2200012278d3765c50d837ccf7e63188d0ce38941b1a51d28eefcf1edbf8b15",
+    "vendoredSha256": "22eaa3686fb7068ed75ffa57cf9e3c6ef26453ac453117853d53977b72c5ffba",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/hdfilmizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/hdfilmizle.js",
+    "origin_id": "hdfilmizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "1be40f17b37b462260ced8b14074ac2d72edff370a69bc76949bf16e7b02e89d",
+    "vendoredSha256": "dac42b5ecda3cef7e3a3aef3224ac2b35129604beb2d0789144a990978a6d280",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_belgesel_cocuk.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_belgesel_cocuk.js",
+    "origin_id": "anthology_belgesel_cocuk",
+    "origin_version": "1.8.39",
+    "originalSha256": "7f897e81b27a38f9ece074e8d5603957ad52ef89ca745cb974aa118007d90f96",
+    "vendoredSha256": "7f897e81b27a38f9ece074e8d5603957ad52ef89ca745cb974aa118007d90f96",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_muzik.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_muzik.js",
+    "origin_id": "anthology_muzik",
+    "origin_version": "1.8.39",
+    "originalSha256": "4c33efb1a9554256f273810a2cd6a3e2a701c10b0d2a146e3277995ef967bb2f",
+    "vendoredSha256": "4c33efb1a9554256f273810a2cd6a3e2a701c10b0d2a146e3277995ef967bb2f",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_sinema.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_sinema.js",
+    "origin_id": "anthology_sinema",
+    "origin_version": "1.8.39",
+    "originalSha256": "1a72f6f5cba32e40c1783a0c72343883f191796c619b4be1e1f786b3c56f0590",
+    "vendoredSha256": "1a72f6f5cba32e40c1783a0c72343883f191796c619b4be1e1f786b3c56f0590",
+    "modified": false,
+    "modifications": [],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/diziwatch.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/diziwatch.js",
+    "origin_id": "diziwatch",
+    "origin_version": "1.8.39",
+    "originalSha256": "323c77c19f7231516d4274017cc13abb2b4a203db20050eb4ceee16a8925d6cc",
+    "vendoredSha256": "67331750807a2e11c5df735ca25a4337267b65fb42f936e6dc0b16f8b2ab4590",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/seicode.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/seicode.js",
+    "origin_id": "seicode",
+    "origin_version": "1.8.39",
+    "originalSha256": "676fd1c0915118039a0d22d58225070d91be310b84b4f5530d2e70dd4926e804",
+    "vendoredSha256": "30e8f6a80a252290789f67f288d9992f4e7a80ed10851786e750129e86b067d0",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/anthology_diziler.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/anthology_diziler.js",
+    "origin_id": "anthology_diziler",
+    "origin_version": "1.8.39",
+    "originalSha256": "1b98906ea001c482413b6cc6b346665f73d8ef116cf1403796ce1fa6a016bc43",
+    "vendoredSha256": "6df639f10e256d8c0aee18690a5b30584322c5e7ffe489d6a80df635b40cf172",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/puhutv.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/puhutv.js",
+    "origin_id": "puhutv",
+    "origin_version": "1.8.39",
+    "originalSha256": "7b57a4d1f297ff5a7d2cd0a7891cd780acec006ff9708a6e2df9a41b9d5ae0f8",
+    "vendoredSha256": "bc0057b8fb076bc6028fa93cb87230c662d432c115a1a82229a386c8a9db0613",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "puhutv-homepage-fallback"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/anthology/trdiziizle.js",
+    "origin_repo": "falsisdev/anthology",
+    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+    "origin_path": "providers/trdiziizle.js",
+    "origin_id": "trdiziizle",
+    "origin_version": "1.8.39",
+    "originalSha256": "6c2f57b05119d03469c52cb7c9ff1b716267adb301cfb81534e1a2f93d81f7da",
+    "vendoredSha256": "5a1886d5dfd7dd35b8384a17be2ab563b9720c75671275ad73b4acea21df86c5",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/turkish-nuvio/animecix.js",
+    "origin_repo": "fmustafayaman/turkish-nuvio",
+    "origin_sha": "20206fd6a947ac262f98e5e4ce621c7b06e232d0",
+    "origin_path": "providers/animecix.js",
+    "origin_id": "animecix",
+    "origin_version": "1.3.4",
+    "originalSha256": "068363c12afc5967dcea87f320dc77e7f5504d99b8da69769e1b84ad161ad338",
+    "vendoredSha256": "fc0cd49fbcaee7d525ea322f32cf1a67cfef8a7d256db93c11a37b4649dd6caf",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE GPL-3.0, Copyright (C) 2026 Mustafa Yaman.",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/turkish-nuvio/fullhdfilm.js",
+    "origin_repo": "fmustafayaman/turkish-nuvio",
+    "origin_sha": "20206fd6a947ac262f98e5e4ce621c7b06e232d0",
+    "origin_path": "providers/fullhdfilm.js",
+    "origin_id": "fullhdfilm",
+    "origin_version": "1.4.1",
+    "originalSha256": "f0e8c905cc0adca372b2f41e07019a3f9fb3468e90ed046bf057d74cc261d9fc",
+    "vendoredSha256": "f3d7bde71bf37a4bf56889a33b7634ee26b9c1e63ad1c620e79b6d7affb3d117",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE GPL-3.0, Copyright (C) 2026 Mustafa Yaman.",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/turkish-nuvio/dizifilm.js",
+    "origin_repo": "fmustafayaman/turkish-nuvio",
+    "origin_sha": "20206fd6a947ac262f98e5e4ce621c7b06e232d0",
+    "origin_path": "providers/dizifilm.js",
+    "origin_id": "dizifilm",
+    "origin_version": "1.7.2",
+    "originalSha256": "e1ab92a69e7252478f973fc58c7a2b2b72a0bab6a1b289327ff317dbb6af4725",
+    "vendoredSha256": "f38e1e54fa8cdab1a9d171ea147ecf4cb50c5df3d33a1a857473514333b6e75f",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE GPL-3.0, Copyright (C) 2026 Mustafa Yaman.",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/turkish-nuvio/dizibal.js",
+    "origin_repo": "fmustafayaman/turkish-nuvio",
+    "origin_sha": "20206fd6a947ac262f98e5e4ce621c7b06e232d0",
+    "origin_path": "providers/dizibal.js",
+    "origin_id": "dizibal",
+    "origin_version": "1.4.0",
+    "originalSha256": "f09ee1942f1c73908cfff845c76393f6edad3c17f0a7fabb814e2e6c4ad60491",
+    "vendoredSha256": "cadc80cc119d8a47a50f6ba18835d3801e0ceae3421ce96647ea4a28361b98ca",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "GPL-3.0",
+    "license_note": "LICENSE GPL-3.0, Copyright (C) 2026 Mustafa Yaman.",
+    "permissionBasis": "published-licence",
+    "permissionDate": null
+  },
+  {
+    "file": "providers/mooncrown/moonvidmodyfilmdizi.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/moonvidmodyfilmdizi.js",
+    "origin_id": "moonvidmodyfilmdizi",
+    "origin_version": "1.0.0",
+    "originalSha256": "836d183bfa45522bfbca2f9cf91a3de398156574ca189371fc5f4dc987d72dfa",
+    "vendoredSha256": "48ef6b217d65f168a2f3f5d4527d5bab4dc9a9b95e2d887a4cc0e5301bc838c3",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/MoOnCrOwNFilmM3U.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/MoOnCrOwNFilmM3U.js",
+    "origin_id": "MoOnCrOwNFilmM3U",
+    "origin_version": "1.0.0",
+    "originalSha256": "b098b2ff44eeff670de501acb446d834c84d22ba6bddee07263d5172b3263aaf",
+    "vendoredSha256": "91b88adfcaccb9fea1cd765e6be9d7e16cb90a4e29e10f7b5da59919b263dfc2",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/MoOnCrOwNDiziM3U.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/MoOnCrOwNDiziM3U.js",
+    "origin_id": "MoOnCrOwNDiziM3U",
+    "origin_version": "1.0.0",
+    "originalSha256": "ec8c67337599828bf6a688f7c6ef4a9d5ad2fbf0603baa075f352f2b2b841733",
+    "vendoredSha256": "46d20eb19e88ef25ba1dffbdf752a8903701daaaecdda0878f6098f49e50f0ae",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/M3U/m3u.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/M3U/m3u.js",
+    "origin_id": "m3u",
+    "origin_version": "1.0.0",
+    "originalSha256": "0f054532865db4f7b40a1c6ea5988aeaa8ea129f2fe0549af1c2a56d4f49b190",
+    "vendoredSha256": "41d483939811aaffd64445763ebdc1b2128adbbb0acec66f3b66f982f2dc0caf",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/M3U/ListM3u.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/M3U/ListM3u.js",
+    "origin_id": "m3u.mooncrown.addon",
+    "origin_version": "1.0.1",
+    "originalSha256": "f1bbf766ff5b2d53d8071737cd0d68115c6d6d60b93a4ba75a049ace723ca156",
+    "vendoredSha256": "f1bbf766ff5b2d53d8071737cd0d68115c6d6d60b93a4ba75a049ace723ca156",
+    "modified": false,
+    "modifications": [],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/netmirror.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/netmirror.js",
+    "origin_id": "netmirror",
+    "origin_version": "1.0.2",
+    "originalSha256": "8bc36ecb95ac9e9b6c44ed4e0aff2d86f899b4c26566b2381d2c9cf63fc2a1cc",
+    "vendoredSha256": "54c5f151c21150f0defea9ef8d0121c69d2369875c7a0ce14475888bc91661e1",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "third-party-session-token-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/sinemacx.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/sinemacx.js",
+    "origin_id": "sinemacx",
+    "origin_version": "1.0.0",
+    "originalSha256": "8ab5b4de45f13787566237377f1e32c12207763d1ad8dd4932351b26f702b74f",
+    "vendoredSha256": "d4758227e3633312e2b3bbd6465770382c38e5f6d043502d02ed347c0ee1ae10",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/diziyou.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/diziyou.js",
+    "origin_id": "diziyou",
+    "origin_version": "1.0.4",
+    "originalSha256": "b9507a24de55f0abdbc04943eb1872fef85a07aeba2b623e0b0428448d587cd9",
+    "vendoredSha256": "3ebfdf32ddfbf8d7f802cbdc508d68487a08e4789135e70c4925bd4ba4b4c82d",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/fullhdfilmizlesene.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/fullhdfilmizlesene.js",
+    "origin_id": "fullhdfilmizlesene",
+    "origin_version": "1.0.0",
+    "originalSha256": "5f930f4fbb4c8ab59307100eebb60807e3d99ae3392fae2b54f6da737b8bb264",
+    "vendoredSha256": "9adb1b9312a5a12c42d8b476319cea1d742aa26867216d55c6b5c4e71d2793a0",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/sinewix.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/sinewix.js",
+    "origin_id": "sinewix",
+    "origin_version": "1.0.0",
+    "originalSha256": "80eafe8ac302b4b35647c17de23ad46be00d519c05f394fff1c8c1f100d4ee56",
+    "vendoredSha256": "36e6a65caa876fe87ef400920419f67bf846cc9972172d45e0b7512c785d404d",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "client-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/rec.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/rec.js",
+    "origin_id": "rec",
+    "origin_version": "1.0.4",
+    "originalSha256": "f2b8e1108dd2b3d5e427cbe97f7379f2fface452d5fbd10b52eef4ba129f3e90",
+    "vendoredSha256": "e0a48e88ad530ea6c914392f50f61fdcfd36937cf68ab61beb5e19306eaa816c",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/jetfilmizle.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/jetfilmizle.js",
+    "origin_id": "jetfilmizle",
+    "origin_version": "1.0.0",
+    "originalSha256": "312dbc6702f07bef1f49f463c8b165313dcd28c89cddc6447f43493744fdffd1",
+    "vendoredSha256": "015a071287692ec1e1775d787c98cca5806ae97ea794b773d42d35fafec7bc1b",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/sezonlukdizi.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/sezonlukdizi.js",
+    "origin_id": "sezonlukdizi",
+    "origin_version": "1.0.0",
+    "originalSha256": "39a1c9f15e73387e19fcbda0c615c67def5ef73225f487cd2d1bd240ab282ebc",
+    "vendoredSha256": "58ef60ae12a41cdeda731cdf8f2d6dec366a3fbfb40fbeb42db48d21dce94b02",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/webteizle.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/webteizle.js",
+    "origin_id": "webteizle",
+    "origin_version": "1.0.0",
+    "originalSha256": "1b7d931eb11ab98db50b6c07271555817fd37cebcfceeb6c1bb1152be4f63cb9",
+    "vendoredSha256": "f4dfde1204d5ac5dd8c232664a26ea2f4378a161f14eb8bb47508356357e9af6",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/filmmodu.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/filmmodu.js",
+    "origin_id": "filmmodu",
+    "origin_version": "1.0.0",
+    "originalSha256": "02bc8129b9b06cc3c8913b920854237d9bf50ddd94222ac2e2932ede0cc71e26",
+    "vendoredSha256": "89bc03a9e9179ef66ef6549a79193c8b3e1f20b49be87e479a7cfe602dee18ab",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/altiyuzaltmisaltifilm.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/altiyuzaltmisaltifilm.js",
+    "origin_id": "altiyuzaltmisaltifilm",
+    "origin_version": "1",
+    "originalSha256": "ab09ee8b0b2bdc52cd8833cd8e2e6238501c52339c3876508aa12c771bfb67e7",
+    "vendoredSha256": "09bac52499ba7c658100c74ebdd29789de8b32035bf2297129cdcd781bb8194b",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/cinemacity.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/cinemacity.js",
+    "origin_id": "cinemacity",
+    "origin_version": "1.0.0",
+    "originalSha256": "084eb0e02311cd143474c0b8516e5db7fedce441294d8a80ae0df047123d93c9",
+    "vendoredSha256": "2287ce212dde71fc34aff96bf6d30980d0f91bc54da22328782408e8f23c21c1",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed",
+      "third-party-session-cookie-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  },
+  {
+    "file": "providers/mooncrown/vidlink.js",
+    "origin_repo": "mooncrown04/nuviotr",
+    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
+    "origin_path": "providers/vidlink.js",
+    "origin_id": "vidlink",
+    "origin_version": "1.0.0",
+    "originalSha256": "931d0f342ef8090b3bc4e56ccec5f79fba95137dd8a723b714aee60b57674fa5",
+    "vendoredSha256": "0afb957db78054d67c28d61ec9a1d34aafc347dffc9f5a1a28c7846f5721c472",
+    "modified": true,
+    "modifications": [
+      "tmdb-key-removed"
+    ],
+    "spdx": "NONE-FOUND",
+    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
+    "permissionBasis": "user-reported-permission",
+    "permissionDate": "2026-11-15"
+  }
+]

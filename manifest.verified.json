@@ -1,0 +1,232 @@
+{
+  "name": "Sinefil Repository",
+  "version": "1.0.0",
+  "description": "Yalnızca gerçek uygulama QuickJS çalışma zamanında sayısal TMDB girdisiyle hls/mp4 URL döndüren sağlayıcılar (URL biçimi doğrulaması; oynatma tam doğrulanmadı).",
+  "author": "Sinefil (kaynak: falsisdev/anthology, fmustafayaman/turkish-nuvio, Wekmed/nuvio ve mooncrown04/nuviotr [kullanıcı bildirimli izin])",
+  "scrapers": [
+    {
+      "id": "vidlink",
+      "name": "Vidlink",
+      "description": "TMDB entegrasyonlu global film ve dizi akış sağlayıcısı (4K/1080p direct MP4).",
+      "version": "1.8.39",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/anthology/vidlink.js",
+      "enabled": true,
+      "formats": [
+        "mp4",
+        "m3u8"
+      ],
+      "logo": "https://vidlink.pro/favicon.ico",
+      "contentLanguage": [
+        "en",
+        "tr"
+      ],
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "sinemacx",
+      "name": "SinemaCX",
+      "description": "Sinema.gg arşivi üzerinden doğrudan 1080p Filmizle HLS master akışları.",
+      "version": "1.8.39",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/anthology/sinemacx.js",
+      "enabled": true,
+      "formats": [
+        "hls",
+        "m3u8"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=sinema.gg&sz=128",
+      "contentLanguage": [
+        "tr"
+      ],
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "ddizibox",
+      "name": "DDiziBox",
+      "description": "DDiziBox dizi ve film arşivi — Pilavyer üzerinden 1080p FHD doğrudan adaptif HLS master akışları ve Türkçe altyazı desteği.",
+      "version": "1.8.39",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv",
+        "series"
+      ],
+      "filename": "providers/anthology/ddizibox.js",
+      "enabled": true,
+      "formats": [
+        "hls",
+        "m3u8"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=ddizibox.com&sz=128",
+      "contentLanguage": [
+        "tr",
+        "en"
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "stream"
+      ],
+      "supportsExternalPlayer": true,
+      "catalogs": [
+        {
+          "type": "movie",
+          "id": "anthology_ddizibox_filmler",
+          "name": "DDiziBox — Filmler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "series",
+          "id": "anthology_ddizibox_diziler",
+          "name": "DDiziBox — Diziler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true
+            }
+          ]
+        },
+        {
+          "type": "series",
+          "id": "anthology_ddizibox_animeler",
+          "name": "DDiziBox — Animeler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "setfilmizle",
+      "name": "SetFilmIzle",
+      "description": "SetFilmIzle arşivi üzerinden FastPlay 1080p HLS master akışları ve TR/EN altyazılar (film + dizi).",
+      "version": "1.8.39",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/anthology/setfilmizle.js",
+      "enabled": true,
+      "formats": [
+        "hls",
+        "m3u8"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=setfilmizle.ltd&sz=128",
+      "catalogs": [
+        {
+          "type": "movie",
+          "id": "anthology_setfilmizle_movies",
+          "name": "SetFilmIzle — Popüler Filmler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": false
+            }
+          ]
+        },
+        {
+          "type": "tv",
+          "id": "anthology_setfilmizle_series",
+          "name": "SetFilmIzle — Popüler Diziler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": false
+            }
+          ]
+        }
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "stream"
+      ],
+      "contentLanguage": [
+        "tr"
+      ],
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "hdfilmizle",
+      "name": "HDFilmIzle",
+      "description": "HDFilmIzle (Ink/Vip) arşivi üzerinden FastPlay 1080p HLS master akışları ve TR/EN altyazılar.",
+      "version": "1.8.39",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/anthology/hdfilmizle.js",
+      "enabled": true,
+      "formats": [
+        "hls",
+        "m3u8"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=hdfilmizle.ink&sz=128",
+      "catalogs": [
+        {
+          "type": "movie",
+          "id": "anthology_hdfilmizle_movies",
+          "name": "HDFilmIzle — Popüler Filmler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": false
+            }
+          ]
+        }
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "stream"
+      ],
+      "contentLanguage": [
+        "tr"
+      ],
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "dizibal",
+      "name": "Dizibal",
+      "description": "Türkçe dublaj/altyazılı film, dizi ve anime kaynağı — dizibal.org",
+      "version": "1.4.0",
+      "author": "turkish-nuvio",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/turkish-nuvio/dizibal.js",
+      "enabled": true,
+      "hasSettings": true,
+      "logo": "https://dizibal.org/favicon.ico",
+      "contentLanguage": [
+        "tr"
+      ],
+      "formats": [
+        "m3u8"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true
+    }
+  ]
+}

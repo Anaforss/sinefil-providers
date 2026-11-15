@@ -1,0 +1,1109 @@
+[
+ {
+  "file": "bundle/assets/logo_1_transparent.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/logo_1_transparent.png",
+  "sha256": "61105e12b7efa2b859b6b0b87be1c754a29fef1e73a3d025c84c756fbda5c16b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/anizium.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/anizium.png",
+  "sha256": "ce153642f55092bc8b230b064aed321a1776704c8b3492160fc43d1c56a2557c",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/providers/M3U/Liste/canli.m3u",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "providers/M3U/Liste/canli.m3u",
+  "sha256": "efb235e540cae8580b3eea4c8c026ae3e15b81f8ed039cc697db6d8d77ac41d4",
+  "spdx": "GPL-3.0",
+  "kind": "m3u-playlist-data"
+ },
+ {
+  "file": "bundle/assets/canli/24tv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/24tv.png",
+  "sha256": "178b38f768f227c64aaa4e052c4fc9e466e97aabf5ed012ab3f7ad9ff11a892d",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/a2.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/a2.png",
+  "sha256": "a4daa1d16b378535aa5b478c23e497d89bd5d2003b160236c9287e7dbc80aa29",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ahaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ahaber.png",
+  "sha256": "75744c6d7e9f9b6e5ae5b78b13bb7c2109576f5d03ab6d0e54accd02310b1fc8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/akittv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/akittv.png",
+  "sha256": "ba8b8af7fc065db64e2335363b78c02e407bf0b726af98de9d8e18562d3ae7d9",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/aspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/aspor.png",
+  "sha256": "b88af567fc9cd1e6616435c6d5f411f336eb29ebbeff874353d77b1abfc0b878",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/atv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/atv.png",
+  "sha256": "b1f32847a8bfc4d1538bab688316805d6588587c2d292431065e6fca503bb95f",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/bbcnews.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/bbcnews.png",
+  "sha256": "de082049f54d47af19117ad323f9959687b7e5faad9fe9aa40369d9bdc05db66",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/beinsports.jpg",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/beinsports.jpg",
+  "sha256": "8550c8ea208fa89a61d1280de56369c82e136682d38fd612e2558f830432cadc",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/beinsports.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/beinsports.png",
+  "sha256": "a29fed4a3bcbcca53432a4a731ec55556c45a14b4eb9a9c0287c79b11e0e87f1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/benguturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/benguturk.png",
+  "sha256": "3dac439acf3898ba8d6b231685180c3c2a6509174f4b5578a84ca90cd4ab9476",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/beyaztv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/beyaztv.png",
+  "sha256": "0391c09804ce2837a7c7f17514d858d43834f6442d579042fb1f51843f78ea1f",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/bloomberght.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/bloomberght.png",
+  "sha256": "2b9e75deb1d8adddfc440176caaabf93f26c9575b75d135d03c227f4b5662e4c",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/cbcsport.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/cbcsport.png",
+  "sha256": "345df2ccdf17b6144010f34fef258d9b5249063bdcf92fd4658e7bf7ca65ee1b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/cbsnews.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/cbsnews.png",
+  "sha256": "8b9bddb53f1188ec7a22d0765f940710d5033bc7a6917996991449b488215a30",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ciftcitv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ciftcitv.png",
+  "sha256": "be4660e72c5cee95facf88d8ec1e5486ef4289e62b96ad382e7b9f92823e34be",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/cine1.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/cine1.png",
+  "sha256": "33da8fd3e0bc9c5180a10bcba0f8c85f659d340f2ca186fa05c908137d68504f",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/cnbce.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/cnbce.png",
+  "sha256": "64181d81835e4fb1e0ec39ae31ef21fff7463370f5b283af93bc555b28e85e85",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/default_tv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/default_tv.png",
+  "sha256": "27c8796733e5846b2d3fe1a89e1db7ae97c735e36f77978843669807a69e8b8a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/diyanettv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/diyanettv.png",
+  "sha256": "d71ac2019c2d5063f41f1010440b05324e8ab1d85e18955668f870c038b3e1e9",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/dmax.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/dmax.png",
+  "sha256": "7acaf6055022de3ff71afff6eeec7797385ee7a60846e227e873d701a7365fba",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/dreamturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/dreamturk.png",
+  "sha256": "0de877cb02aca3f208427fbee167a4830168ee3ee4b9fdc5fceea0bedf361d02",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ekolsports.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ekolsports.png",
+  "sha256": "bb954dc84f1e2bd037ed992aa705a1dbf212eac2525e2a7f76f086110d95e534",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ekoltv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ekoltv.png",
+  "sha256": "58283366dab89bb0cfe0096284013f4b3d31b8c195b5a00b0ef3bbc39f149cde",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ekoturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ekoturk.png",
+  "sha256": "cd748cd69789bd4664d168fdd451b70d14281f71a8346c8a398c4735691cc471",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/eurod.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/eurod.png",
+  "sha256": "6748045f64396c530c44c431963cc944e713ac744344cecff3bb44f52a038e04",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/eurosport.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/eurosport.png",
+  "sha256": "9f88ef41c84361f1eeffd717d220eb834f12c25b1d2d73a278ec40d253be82c1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/exxen.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/exxen.png",
+  "sha256": "306fe2e261f1caabca007dd511cd6eff61318f7a4be62a1e835c687d7750761b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/exxenspor.jpg",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/exxenspor.jpg",
+  "sha256": "c42ed4a57a898da50901f595cd8f9133bfb53dbc0c12de063f67f76f528419c9",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/exxenspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/exxenspor.png",
+  "sha256": "306fe2e261f1caabca007dd511cd6eff61318f7a4be62a1e835c687d7750761b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/fbtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/fbtv.png",
+  "sha256": "8296647ae65162150e91fefbf5a960ef127df6ac2a1b9be9ef642830eccfc0f3",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/finansturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/finansturk.png",
+  "sha256": "fb5fecac6eb447eda5a88be5418936357d6b376e9ab02b3244dad2109c055655",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/flashhaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/flashhaber.png",
+  "sha256": "4ef53296aa3e4cac3a3e84682a29544d093c6782cf6bb5df5d61d0dd0515869c",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/foxnews.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/foxnews.png",
+  "sha256": "cc9dda35f1f334155a3136eae58a1669445923925d15aabf88cb76a0b0943bb8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/france24en.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/france24en.png",
+  "sha256": "7d3443c390f5c8f565c6641f5215976d7214035c74a297c4ccab2d8ec466b9a5",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/fx.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/fx.png",
+  "sha256": "a44006f441d70ea654fd886e276891197f5fe7b95640f6de694b14bfd3d47026",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/gstv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/gstv.png",
+  "sha256": "d76a048284399a869f09edf87e5c42456c1eaa606bffaaa0f7810a29f6e1cae7",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/haberglobal.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/haberglobal.png",
+  "sha256": "74bbdc19bbdf830583e70e5998af74b73fc165f6dc237ee554fe0d422e7773c6",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/haberturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/haberturk.png",
+  "sha256": "7dce584b969d1cd7e126aaa4c24d0f30fb7c08bffaf63343600b99b46d3fd4b1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/halktv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/halktv.png",
+  "sha256": "7f3bea87c36476268e30a1721c5a0c00c5e0c1abf0307534879ca2c751c31bd6",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/htspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/htspor.png",
+  "sha256": "1471ab3bfa70bea28319c7559896b78134971fdd90a4cbe7cd51d6d8038302b8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/idmantv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/idmantv.png",
+  "sha256": "00e96609e1bb34f5b33c92199fa69e7dd2bfb91173588f59ea12852316dfb1ef",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/kanal7.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/kanal7.png",
+  "sha256": "27d09dfb52343715c1b08f67f1bdf45ce4deed0e0a5b85ce0e261eaac1315097",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/kanalavrupa.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/kanalavrupa.png",
+  "sha256": "cd3f708a2393b5eccc87168c7e6a17d0ef9c06f06c8e95eef7f9b403419585c7",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/kanald.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/kanald.png",
+  "sha256": "9b1513c2f929574f55a530c25744c6d6f5ceb9b145cbd56337bb20a261dedf1e",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/kralpop.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/kralpop.png",
+  "sha256": "9dc91d62e554932390b18abfcbd63c269b27f916a3ad333f58fa06ab9a6a41e4",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/liderhaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/liderhaber.png",
+  "sha256": "1909121220421c36ad0db41af90f8b8e2a0a90c6ae7a6f8fda517e7510661136",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/mahsunsports.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/mahsunsports.png",
+  "sha256": "add6c3a93b7c237490fec360d5dbd43ad26a32f88d7d6ec8dc62b4613a26b77a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/meclistv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/meclistv.png",
+  "sha256": "4f8fd3446639cb7fa1b17e356cdb164bae72398450384289a315fa35a2d1064b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/minikacocuk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/minikacocuk.png",
+  "sha256": "28031b84cdff8e2fbec4cab0a43a687647e54ff8859ba8cda8f8b1d9a0d6babc",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/minikago.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/minikago.png",
+  "sha256": "0f911fbd2408f7c8cdbf2c68044bb96e6ace19478b45b82b7963a33fb6c78c81",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/nbatv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/nbatv.png",
+  "sha256": "9caab91b78795497933cfc53193895f67a56bfc4b58fa7c35176bccf9ce996da",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/nhl.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/nhl.png",
+  "sha256": "c27e3d2adc80d9c182a7b1370e0541e6cb1caae2c99c6e0b6a8226e8e69f83aa",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/now.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/now.png",
+  "sha256": "e67b405bb48af4d74a364935d49629419e38aac8dc411e2d5f1e7d858897be00",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ntv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ntv.png",
+  "sha256": "2efe7a22bf6edb7b035e3fe204066b51f5472881825d0571e26027be81955cb1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/number1.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/number1.png",
+  "sha256": "f3d927e271ff1eb38b6c3f4fc234c38007a664929e753e534a7103f6a801ca18",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/powerdance.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/powerdance.png",
+  "sha256": "6edadce7792c5e52ee63217633d70ba5d133c7226706a706906be063f32e69bd",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/powerlove.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/powerlove.png",
+  "sha256": "93b186369654843bb7aebbccffdd36b730c210ae2b98a380c0e5704f319424d5",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/powerturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/powerturk.png",
+  "sha256": "23c7867c5e5e702e8c0b7689a50472a92dcd0bc951167513ed25fb46ee3527d3",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/powertv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/powertv.png",
+  "sha256": "43339fc0fb2705d16969a4ba0941b4a420d30617c19578d2c641a1859e8a37a3",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/realmadridtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/realmadridtv.png",
+  "sha256": "ff748daba7e3152d274f2999530faad80384088600654b9efe1578125bed351e",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/redbulltv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/redbulltv.png",
+  "sha256": "c4a18363cf03547d6a0139228fbcfe13a6f76a2c0a71ed20751c5df34bc91331",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/reuterstv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/reuterstv.png",
+  "sha256": "4551dbcde0efc7b44b6a04e366fa7aff41f2bf7fe3dd1b904606c792e4ec033d",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/showmax.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/showmax.png",
+  "sha256": "5b832fb715bc24ddb202912ad3be74b8e4624dc0ef877677c0eac8d26f145352",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/showtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/showtv.png",
+  "sha256": "1c523043a745dec41c79a743432a96ffd0b3578d0d1069d526865b49cb51ca58",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinema1001.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinema1001.png",
+  "sha256": "a5785f2b6eb8d36fbc1dc5213137774e73f6088281790b27d02facfc395d68f8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinema1002.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinema1002.png",
+  "sha256": "5f59b874cb2ddb3e1c0816e52fea1dea86aec4226ea397aa8512a92ceeba2394",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinema2.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinema2.png",
+  "sha256": "18d946b1a2a895c4c82d32eab501961fb03deb1bd3b93feec4836fa5423f1462",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinemaaile.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinemaaile.png",
+  "sha256": "36019e32b7edd0e3d019ad931e169df659bd2bdb4f8d9e43af8882d317ed6aa7",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinemaaksiyon.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinemaaksiyon.png",
+  "sha256": "e44d49e631edd162e1567871abb1eeb7c9e13b6150bc2756370755bdfe06f768",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinemakomedi.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinemakomedi.png",
+  "sha256": "6b5f02264dea74cb0275dd6f8bdf5133ed6fffe5899edce65119b1de460c22a0",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sinematv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sinematv.png",
+  "sha256": "a58b516e56f3c881596f3557fc2297f1b6a7107adb110119edc30ff600d2555a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/smartspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/smartspor.png",
+  "sha256": "3098936f245d5a3b7d8d19387f21c7307c56a1cc92641f7088ad41b21c0bcf5e",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sportfishingtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sportfishingtv.png",
+  "sha256": "ed7ce6f56ba469b2f83b87166da663fccf4fe97aba8705ea88e185ee048ab0f8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/sportstv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/sportstv.png",
+  "sha256": "4790733f0845a8c026996f488e70278f1e6e44e1774105118116cb41ea776ced",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ssport.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ssport.png",
+  "sha256": "e09aa053b1075cd5c63b7b99ce849db64e466d70857ded5e99084eac029aae68",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/startv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/startv.png",
+  "sha256": "5cc83818b901caa792bcb991e52bba08a1427de56bf33c0c72ae31ff0dba8d1f",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tabiispor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tabiispor.png",
+  "sha256": "b95e8c8519304d3ed39fe960273b8885c95aa80978b4bf2f701bd6f196262867",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/taraftarium24.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/taraftarium24.png",
+  "sha256": "add6c3a93b7c237490fec360d5dbd43ad26a32f88d7d6ec8dc62b4613a26b77a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/taytv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/taytv.png",
+  "sha256": "56ff7e1a72d28f825154ae36a4a387547fb747fcb6b242f772d76f0d3e5bcffa",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tbmmtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tbmmtv.png",
+  "sha256": "0bb1101bf3c0ea41faf00c25579b6393990b7012e02316ace70a43e0f3a417b1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tele1.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tele1.png",
+  "sha256": "5f7a40cf050e8b9d498a83624aefe000b9d4173dfaeabdf27c170c614be12a9e",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/teve2.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/teve2.png",
+  "sha256": "4b522dbfe60dd97860c27db0fbc13e97a9fc17d67caef40ec63c06c06a2a3e76",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tgrthaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tgrthaber.png",
+  "sha256": "87f1097481d961df374fabca6add74aafe77d3dba5341896da1b40219998ec0d",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tivibuspor.jpg",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tivibuspor.jpg",
+  "sha256": "a7aecc3277d807bbc9cac6410784d50325a93cf115541f1484725b6d7ada91dd",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tivibuspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tivibuspor.png",
+  "sha256": "7188d88c93751b800c7c0ab5cadf81d500f7692cbc5e0797ce8cd743945770c1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tjktv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tjktv.png",
+  "sha256": "11d7c446800da906a0cae9fe8fa93ab2811f174bf1b504f7fddaf542aef03718",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tlc.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tlc.png",
+  "sha256": "7ebb2d015101f6303e4fa7ba496e5374979d2225c069e91456221b6c9a3f2fd8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tmbtv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tmbtv.png",
+  "sha256": "924d65553d08e7f37b590308ac4f19a1c90f3e2c381901147e9c4f769c83fcc8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/travelxp.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/travelxp.png",
+  "sha256": "30d04df86c529f1933e8b00b52ae525fb20913d6743a7487277cf1fa35bd88ef",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trt.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trt.png",
+  "sha256": "cfc80cd6b37b8b0b2559ffa777755554ca7d0f51150fe9879c7b8644fdfedc0b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trt1.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trt1.png",
+  "sha256": "6f4fe059de1f1b02dcc37f1e27fea84bb85f5c9e798f626461d1030fb95f8d96",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trt2.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trt2.png",
+  "sha256": "65d8ef3600f2e2c22532c75bde06a69e151779efa3e2244ed646a0d9fa1d9a99",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtarabi.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtarabi.png",
+  "sha256": "91f2b86ef694979f714534543e322e30752d53d6c4eeee6353a964ed203ade7e",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtavaz.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtavaz.png",
+  "sha256": "6dcabba736527551b360f89f580715cc5d2b3e57dfe43209d60579d2ccd993cd",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtbelgesel.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtbelgesel.png",
+  "sha256": "c0fbd9276c73b454de87ee31bb5b1e92a0b752f519b7f6c21238bf72450ff8b0",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtcocuk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtcocuk.png",
+  "sha256": "7dcd5211a57eb3848880831d94d70ddd8042fc608d5a09b7ec8327603e0c6fa5",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtdiyanetcocuk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtdiyanetcocuk.png",
+  "sha256": "0ee6d39fe9d20591394ba34b9349343a9ddd083e263a5bed6604fc77df31af34",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trteba.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trteba.png",
+  "sha256": "f99fa39614d4995fadb2fc770f83debd3d96cdda382823caeb98a0ade3231435",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtebailkokul.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtebailkokul.png",
+  "sha256": "5828894fa995a24ab20ed442469f093b3f090380106dd7e90b7885601cbebb0c",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtebalise.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtebalise.png",
+  "sha256": "dcf56bd3a9f962460c0453d7799beb8fb602c22c3c73b376a9408294144d29fc",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtebaortaokul.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtebaortaokul.png",
+  "sha256": "01ac67dae6b2e5478c421ba8e9401308a2d2df82a8c6c3c8fb2a6c31e5af9eb1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtgenc.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtgenc.png",
+  "sha256": "85235fe1f05f5ca0c4045d8040329b471c6dd1bbf5b5adaa7af2980e5eb4f78a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trthaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trthaber.png",
+  "sha256": "f4ae62cc73adf12d4766bd048c2ed9cc429a74088cc13b845b4f8e4ded889852",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtkurdi.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtkurdi.png",
+  "sha256": "4b57c0108278e589cf3196a90397dc299060464dc7977502a755429eeef34feb",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtmuzik.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtmuzik.png",
+  "sha256": "5bec46962efc285b6a4fe3ae4df4dd904b83d6c04b0a2236590b1f83b5030734",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtnostalji.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtnostalji.png",
+  "sha256": "d3e5b7929dd906762caca85d70cfa79a77fc0cc571f0a6bfa0ac890251f986d1",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtspor.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtspor.png",
+  "sha256": "cfc80cd6b37b8b0b2559ffa777755554ca7d0f51150fe9879c7b8644fdfedc0b",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtsporyildiz.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtsporyildiz.png",
+  "sha256": "f3f7ab523b43fd818d9719b74a693f0df3833d3a8592d403a7934115b9e05967",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtturk.png",
+  "sha256": "8c0e5fba98cf32a7ce21a6df4ca570b3124defd3090b61a8c4a26494187e42a9",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/trtworld.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/trtworld.png",
+  "sha256": "5b9c1e9ca6cfe50d9eaab5c383a9d336f03a57ecb4c7de59c9c3b645875c6756",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/turkhaber.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/turkhaber.png",
+  "sha256": "e20e18f6b7a540a91ba5cb066da4dcedacfbe2d555734874c8c45e0310b7fda7",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tv100.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tv100.png",
+  "sha256": "6d1c534bcfc5d55e5f4c560fe5c1fd044924b06125c76c08cf80217cd8f17b5a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tv360.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tv360.png",
+  "sha256": "ca2e9375fd9948e006a0e9a67d179447dccf387e3d5895840ae389be75b2c036",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tv4.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tv4.png",
+  "sha256": "1214280794b86550c6152488eb2b43458c560564658c4e1c6f1abd7780031b47",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tv8.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tv8.png",
+  "sha256": "56ae9eda5c42567ff5e03a81ae4a84942246b3c4d4d97ffe7ff0716361c0c62a",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tv85.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tv85.png",
+  "sha256": "454758aa200b8d070a3c03d03bb94792c8d99e332af277fea5ca6cf3739af9d9",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tvnet.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tvnet.png",
+  "sha256": "24086ff45659c0fa7bb840d90533282f10bbfeb51ac2fbf67efee993a7a5f591",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/tytturk.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/tytturk.png",
+  "sha256": "e9883f05c74643822390590468cc080b79cae62d77952938b08cb513b438eadb",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ufcnetwork.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ufcnetwork.png",
+  "sha256": "8be22c98399b3ca6a36780bbbea0d40865e112e747c89f3f91d948e219262ec2",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ },
+ {
+  "file": "bundle/assets/canli/ulketv.png",
+  "origin_repo": "falsisdev/anthology",
+  "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
+  "origin_path": "assets/canli/ulketv.png",
+  "sha256": "908364b325327c5a78ffee2453095dd3abee1dddcbca52bbaf90c0826fee02c8",
+  "spdx": "GPL-3.0",
+  "kind": "logo"
+ }
+]
