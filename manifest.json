@@ -1,7 +1,7 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.0",
-  "description": "Sinefil kaynak paketi: 78 sağlayıcı. Yalnızca 6 tanesi doğrulanmış adaydır (enabled=true); 72 tanesi karantinadadır (enabled=false) ve çalıştığı iddia edilmez.",
+  "version": "1.0.1",
+  "description": "Sinefil kaynak paketi: 78 sağlayıcının depo kilidi açıktır; kullanıcı seçim yapabilir. Erişilebilirlik ve oynatma garantisi değildir. Ayrı manifest.verified.json sınırlı doğrulanmış aday listesini içerir.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
     {
@@ -14,7 +14,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/filmmodu.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
       "contentLanguage": [
         "tr"
@@ -33,7 +33,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/filmmakinesi.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://www.google.com/s2/favicons?domain=filmmakinesi.film&sz=%size%",
       "contentLanguage": [
         "tr"
@@ -57,7 +57,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/hdfilmcehennemi.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -75,7 +75,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/filmekseni.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "m3u8"
@@ -95,7 +95,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/m3u_provider.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -112,7 +112,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/jetfilmizle.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://jetfilmizle.net/public/icons/apple-touch-icon.png",
       "contentLanguage": [
         "tr"
@@ -131,7 +131,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/webteizle.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://webteizle3.xyz/images/logo.png",
       "contentLanguage": [
         "tr"
@@ -149,7 +149,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/sezonlukdizi.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -166,7 +166,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/fullhdfilmizlesene.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -183,7 +183,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/cizgimax.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=64",
       "contentLanguage": [
         "tr"
@@ -202,7 +202,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/cizgivedizi.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://www.google.com/s2/favicons?domain=cizgivedizi.com&sz=64",
       "contentLanguage": [
         "tr"
@@ -221,7 +221,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/sinewix.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -239,7 +239,7 @@
         "tv"
       ],
       "filename": "providers/wekmed/dizilife.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "m3u8"
       ],
@@ -259,7 +259,7 @@
         "movie"
       ],
       "filename": "providers/wekmed/diziyou.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://raw.githubusercontent.com/Kraptor123/domainListesi/refs/heads/main/diziyou.png"
     },
     {
@@ -274,7 +274,7 @@
         "series"
       ],
       "filename": "providers/anthology/anthology_m3u.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8",
@@ -298,7 +298,7 @@
         "series"
       ],
       "filename": "providers/anthology/liderfilmizle.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -350,7 +350,7 @@
         "series"
       ],
       "filename": "providers/anthology/youtube_dizifilm.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8",
@@ -402,7 +402,7 @@
         "tv"
       ],
       "filename": "providers/anthology/sinewix.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv"
@@ -476,7 +476,7 @@
         "tv"
       ],
       "filename": "providers/anthology/dizibak.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls",
@@ -547,7 +547,7 @@
         "stream"
       ],
       "filename": "providers/anthology/M3U/ListM3u.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -570,7 +570,7 @@
         "tv"
       ],
       "filename": "providers/anthology/filmmodu.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -610,7 +610,7 @@
         "tv"
       ],
       "filename": "providers/anthology/hdfilmcehennemi.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -651,7 +651,7 @@
         "tv"
       ],
       "filename": "providers/anthology/diziyou.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -673,7 +673,7 @@
         "movie"
       ],
       "filename": "providers/anthology/dizipod.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -729,7 +729,7 @@
         "movie"
       ],
       "filename": "providers/anthology/animecix.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4"
       ],
@@ -769,7 +769,7 @@
         "anime"
       ],
       "filename": "providers/anthology/anizm.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls"
@@ -810,7 +810,7 @@
         "anime"
       ],
       "filename": "providers/anthology/animom.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls"
@@ -851,7 +851,7 @@
         "anime"
       ],
       "filename": "providers/anthology/animeprax.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls"
@@ -892,7 +892,7 @@
         "anime"
       ],
       "filename": "providers/anthology/anizium.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4"
       ],
@@ -933,7 +933,7 @@
         "movie"
       ],
       "filename": "providers/anthology/asyaanimeleri.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls",
@@ -974,7 +974,7 @@
         "movie"
       ],
       "filename": "providers/anthology/sonanime.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4"
       ],
@@ -1013,7 +1013,7 @@
         "tv"
       ],
       "filename": "providers/anthology/diziboxizle.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls",
@@ -1054,7 +1054,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_spor.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1098,7 +1098,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_haber.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1142,7 +1142,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_ulusal.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1186,7 +1186,7 @@
         "tv"
       ],
       "filename": "providers/anthology/ddizi.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls",
@@ -1291,7 +1291,7 @@
         "tv"
       ],
       "filename": "providers/anthology/dizimom.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1331,7 +1331,7 @@
         "tv"
       ],
       "filename": "providers/anthology/vidmody.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1354,7 +1354,7 @@
         "tv"
       ],
       "filename": "providers/anthology/webteizle.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1376,7 +1376,7 @@
         "tv"
       ],
       "filename": "providers/anthology/yabancidizi.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1399,7 +1399,7 @@
         "tv"
       ],
       "filename": "providers/anthology/tvdiziler.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8",
@@ -1491,7 +1491,7 @@
         "tv"
       ],
       "filename": "providers/anthology/kultfilmler.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1531,7 +1531,7 @@
         "tv"
       ],
       "filename": "providers/anthology/hdfilmdelisi.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1611,7 +1611,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_belgesel_cocuk.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1655,7 +1655,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_muzik.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1699,7 +1699,7 @@
         "channel"
       ],
       "filename": "providers/anthology/anthology_sinema.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "m3u8"
@@ -1745,7 +1745,7 @@
         "anime"
       ],
       "filename": "providers/anthology/diziwatch.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "hls",
         "mp4",
@@ -1774,7 +1774,7 @@
         "anime"
       ],
       "filename": "providers/anthology/seicode.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "hls",
@@ -1807,7 +1807,7 @@
     {
       "author": "falsisdev",
       "version": "1.8.39",
-      "enabled": false,
+      "enabled": true,
       "supportsExternalPlayer": true,
       "id": "anthology_diziler",
       "name": "Anthology Dizi",
@@ -1841,7 +1841,7 @@
     {
       "author": "falsisdev",
       "version": "1.8.39",
-      "enabled": false,
+      "enabled": true,
       "supportsExternalPlayer": true,
       "id": "puhutv",
       "name": "PuhuTV",
@@ -1875,7 +1875,7 @@
     {
       "author": "falsisdev",
       "version": "1.8.39",
-      "enabled": false,
+      "enabled": true,
       "supportsExternalPlayer": true,
       "id": "trdiziizle",
       "name": "TR Dizi İzle",
@@ -1917,7 +1917,7 @@
         "tv"
       ],
       "filename": "providers/turkish-nuvio/animecix.js",
-      "enabled": false,
+      "enabled": true,
       "hasSettings": true,
       "logo": "https://animecix.tv/favicon.ico",
       "contentLanguage": [
@@ -1940,7 +1940,7 @@
         "movie"
       ],
       "filename": "providers/turkish-nuvio/fullhdfilm.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://www.fullhdfilmizlesene.now/favicon.ico",
       "contentLanguage": [
         "tr"
@@ -1964,7 +1964,7 @@
         "tv"
       ],
       "filename": "providers/turkish-nuvio/dizifilm.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://dizifilmizle.to/favicon.ico",
       "contentLanguage": [
         "tr"
@@ -2012,7 +2012,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/moonvidmodyfilmdizi.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2035,7 +2035,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/MoOnCrOwNFilmM3U.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2057,7 +2057,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/MoOnCrOwNDiziM3U.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2080,7 +2080,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/M3U/m3u.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2132,7 +2132,7 @@
         "stream"
       ],
       "filename": "providers/mooncrown/M3U/ListM3u.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2154,7 +2154,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/netmirror.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://net22.cc/favicon.ico",
       "contentLanguage": [
         "en"
@@ -2175,7 +2175,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/sinemacx.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2197,7 +2197,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/diziyou.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "m3u8"
       ],
@@ -2216,7 +2216,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/fullhdfilmizlesene.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv",
@@ -2239,7 +2239,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/sinewix.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "mkv"
@@ -2260,7 +2260,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/rec.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "m3u8"
       ],
@@ -2279,7 +2279,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/jetfilmizle.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://jetfilmizle.net/public/icons/apple-touch-icon.png",
       "contentLanguage": [
         "tr"
@@ -2301,7 +2301,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/sezonlukdizi.js",
-      "enabled": false,
+      "enabled": true,
       "contentLanguage": [
         "tr"
       ],
@@ -2320,7 +2320,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/webteizle.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://webteizle3.xyz/images/logo.png",
       "contentLanguage": [
         "tr"
@@ -2338,7 +2338,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/filmmodu.js",
-      "enabled": false,
+      "enabled": true,
       "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
       "contentLanguage": [
         "tr"
@@ -2356,7 +2356,7 @@
         "movie"
       ],
       "filename": "providers/mooncrown/altiyuzaltmisaltifilm.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "m3u8"
       ],
@@ -2376,7 +2376,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/cinemacity.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "m3u8"
@@ -2400,7 +2400,7 @@
         "tv"
       ],
       "filename": "providers/mooncrown/vidlink.js",
-      "enabled": false,
+      "enabled": true,
       "formats": [
         "mp4",
         "m3u8"
