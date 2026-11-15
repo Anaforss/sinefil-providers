@@ -36,14 +36,15 @@ class T(unittest.TestCase):
         for x in J("manifest.verified.json")["scrapers"]: self.assertIn(x["id"], ids)
     def test_no_variant_suffix_in_names(self):
         for x in self.s: self.assertNotRegex(x["name"].lower(), r"\((wekmed|mooncrown|anthology)\)|turkish-nuvio\)") if x["id"] in {g["keptId"] for g in self.c["groups"]} else None
-    def test_main_manifest_is_cizgimax_only(self):
+    def test_main_manifest_is_three_sources(self):
         # GEÇİCİ: ana manifest yalnızca ÇizgiMax; tüm 62 kaynak manifest.all-sources.json'da saklı (geri alınabilir).
-        self.assertEqual([x["id"] for x in self.main], ["cizgimax-wekmed"])
-        self.assertTrue(self.main[0]["enabled"] is True)
+        self.assertEqual([x["id"] for x in self.main], ["cizgimax-wekmed","filmmodu","ddizibox"])
+        self.assertTrue(all(x["enabled"] is True for x in self.main))
         full = {x["id"]: x for x in self.s}
         self.assertEqual(len(full), 62)
         self.assertEqual(self.main[0]["version"], "1.0.5")
-        self.assertEqual(self.main[0]["filename"], full["cizgimax-wekmed"]["filename"])
+        for x in self.main: self.assertEqual(x, full[x["id"]])
+        self.assertIn("movie", self.main[1]["supportedTypes"]); self.assertTrue({"tv","series"} <= set(self.main[2]["supportedTypes"]))
         self.assertEqual(J("manifest.json")["version"], J("manifest.all-sources.json")["version"])
         for x in self.main:
             self.assertEqual(hashlib.sha256(open(os.path.join(R, x["filename"]), "rb").read()).hexdigest(), self.src[x["filename"]]["vendoredSha256"])

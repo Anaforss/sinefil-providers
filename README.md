@@ -1,6 +1,6 @@
 # Sinefil Sources
 
-Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.6.
+Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.7.
 
 ## İçe aktarma
 Sinefil > Eklentiler > Sağlayıcı deposu ekle alanına şu adresi girin:
@@ -8,7 +8,7 @@ Sinefil > Eklentiler > Sağlayıcı deposu ekle alanına şu adresi girin:
 `https://raw.githubusercontent.com/Anaforss/sinefil-providers/main/manifest.json`
 
 ## Dürüst durum
-- **Geçici:** varsayılan `manifest.json` yalnızca **ÇizgiMax** içerir. Tüm 62 kaynak silinmedi: `manifest.all-sources.json` (hepsi `enabled: true`) ve sağlayıcı kodları depoda duruyor; geri almak için o dosyanın içeriğini `manifest.json` yapın.
+- **Geçici:** varsayılan `manifest.json` **ÇizgiMax, FilmModu ve DDiziBox** (3 kaynak, hepsi `enabled: true`) içerir. Diğer 59 kaynak silinmedi: `manifest.all-sources.json` (hepsi `enabled: true`) ve sağlayıcı kodları depoda duruyor; geri almak için o dosyanın içeriğini `manifest.json` yapın.
 - `manifest.all-sources.json` 62 benzersiz kaynağı `enabled: true` ile listeler (aynı siteyi sunan tekrarlar tek girişe indirildi; eşleme ve gerekçe `CANONICAL.json`, kaldırılan alternatifler isteğe bağlı `manifest.alternates.json`). Bu, kullanıcı seçimine izin verir; çalışırlık garantisi değildir.
 - Tam liste çalışıyor anlamına gelmez; yalnızca 6 aday doğrulama sürecinden geçmiştir, diğerlerinin durumu bilinmiyor/doğrulanmadı.
 - `manifest.verified.json`: yalnızca 6 doğrulanmış. `manifest.quarantine.json`: 56 karantina (tekilleştirme sonrası).
@@ -23,3 +23,6 @@ Tercih edilen Dzen sunucusu (etiket önceliği; asıl tür yönlendirme sonrası
 
 ## Kaynak ve izinler
 Özgün depo/SHA ve vendor SHA-256 değerleri `SOURCES.json` içindedir; lisanslar `LICENSES/`, izin kaydı `PERMISSIONS.md`. Kod ilgili özgün sahiplerine aittir; bu depo genel bir lisans vermez.
+
+## FilmModu ve DDiziBox (1.0.7)
+Kaynak kodu değişmeden (Anthology 1.8.39) eklendi; uygulamanın gerçek QuickJS çalışma zamanında sayısal TMDB kimliğiyle (Interstellar 157336, Inception 27205; Breaking Bad 1396 S1E1, GoT 1399 S1E1) akış döndüğü ve HLS listelerinin geçerli olduğu doğrulandı. Tüm kataloğun test edildiği anlamına gelmez; siteler değişebilir ve bazı ağlarda erişim farklı olabilir.
