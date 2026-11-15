@@ -169,12 +169,13 @@
     "origin_id": "cizgimax",
     "origin_version": "1.0.0",
     "originalSha256": "7c022fee8781cf9dabbbd744aebc72694e0389b9a83ddc07798373ad2661f067",
-    "vendoredSha256": "6aceb92a0a26b8d08a661e7829fc83366daa5734f33006597b460f0cc5637a94",
+    "vendoredSha256": "08e589e32c30c40ff10d1315063472b5a8d9b51c5198f7445bb1ccbfb6e66910",
     "modified": true,
     "modifications": [
       "tmdb-key-removed",
       "cizgimax-dizi-slug-path",
-      "cizgimax-title-year-disambiguation"
+      "cizgimax-title-year-disambiguation",
+      "cizgimax-route-by-redirect-host"
     ],
     "spdx": "NONE-FOUND",
     "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",

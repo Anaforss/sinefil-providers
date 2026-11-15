@@ -139,6 +139,22 @@ function parseServers(html) {
 // ── Dzen embed → DASH MPD → en iyi kalite URL ────────────────
 // /oynat/?t=TOKEN → 302 → https://dzen.ru/embed/ID
 // Dzen embed HTML → MPD URL → XML parse → en yüksek bandwidth Representation
+// Yönlendirme sonrası gerçek sunucu adından (etiketten değil) oynatıcı türü
+function hostKind(u) {
+  var m = /^https?:\/\/([^\/:?#]+)/i.exec(u || '');
+  var h = m ? m[1].toLowerCase() : '';
+  if (/(^|\.)dzen\.ru$/.test(h)) return 'dzen';
+  if (/(^|\.)vidmoly\.[a-z]+$/.test(h)) return 'vidmoly';
+  return h ? 'unknown:' + h : 'unknown';
+}
+
+function extractVidmoly(embedUrl, html) {
+  var m = /file\s*:\s*["'](https?:\/\/[^"']+\.m3u8[^"']*)["']/i.exec(html) || /(https?:\/\/[^\s"'<>\\]+\.m3u8[^\s"'<>\\]*)/i.exec(html);
+  if (!m) { console.log('[CizgiMax] Vidmoly m3u8 bulunamadi'); return null; }
+  var origin = /^(https?:\/\/[^\/]+)/i.exec(embedUrl)[1];
+  return { url: m[1], quality: 'Auto', headers: { 'Referer': origin + '/', 'User-Agent': HEADERS['User-Agent'] } };
+}
+
 function extractDzen(oynatUrl, epUrl) {
   var fullUrl = oynatUrl.startsWith('http') ? oynatUrl : MAIN_URL + oynatUrl;
 
@@ -147,9 +163,13 @@ function extractDzen(oynatUrl, epUrl) {
   })
   .then(function(r) {
     // 302 redirect → dzen.ru/embed/ID
-    var dzenUrl = r.url;
-    if (dzenUrl.indexOf('dzen.ru') === -1) {
-      console.log('[CizgiMax] Dzen redirect bekleniyordu: ' + dzenUrl);
+    var dzenUrl = r.url || '';
+    var kind = hostKind(dzenUrl);
+    if (kind === 'vidmoly') {
+      return r.text().then(function(html) { return { vidmoly: extractVidmoly(dzenUrl, html) }; });
+    }
+    if (kind !== 'dzen') {
+      console.log('[CizgiMax] Desteklenmeyen oynatici: ' + kind);
       return null;
     }
     return r.text().then(function(html) {
@@ -158,6 +178,7 @@ function extractDzen(oynatUrl, epUrl) {
   })
   .then(function(d) {
     if (!d) return null;
+    if (d.hasOwnProperty('vidmoly')) return d.vidmoly;
 
     // MPD URL'ini bul: dzen embed HTML'inde
     var mpdUrl = regexFirst(d.html, '"(https?://vd[^"]+\\.okcdn\\.ru[^"]+dzen_dash=dash[^"]*)"')
@@ -266,7 +287,7 @@ function fetchEpisodeStreams(epUrl) {
                 title:   '⌜ CİZGİMAX ⌟ | ' + label,
                 url:     dzen.url,
                 quality: dzen.quality || 'Auto',
-                headers: { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' }
+                headers: dzen.headers || { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' }
               });
             });
           }

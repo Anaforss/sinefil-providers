@@ -33,5 +33,5 @@ class T(unittest.TestCase):
     def test_no_variant_suffix_in_names(self):
         for x in self.s: self.assertNotRegex(x["name"].lower(), r"\((wekmed|mooncrown|anthology)\)|turkish-nuvio\)") if x["id"] in {g["keptId"] for g in self.c["groups"]} else None
     def test_cizgimax_version_bumped(self):
-        self.assertEqual({x["id"]: x["version"] for x in self.s}["cizgimax-wekmed"], "1.0.1")
+        self.assertEqual({x["id"]: x["version"] for x in self.s}["cizgimax-wekmed"], "1.0.2")
 if __name__ == "__main__": unittest.main()
