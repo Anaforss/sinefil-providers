@@ -1,30 +1,12 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.1",
-  "description": "Sinefil kaynak paketi: 78 sağlayıcının depo kilidi açıktır; kullanıcı seçim yapabilir. Erişilebilirlik ve oynatma garantisi değildir. Ayrı manifest.verified.json sınırlı doğrulanmış aday listesini içerir.",
+  "version": "1.0.2",
+  "description": "Sinefil kaynak paketi: aynı siteyi sunan tekrarlar tek girişe indirildi (62 benzersiz kaynak); tümü kullanıcı seçimine açıktır (enabled: true). Erişilebilirlik ve oynatma garantisi değildir. Kaldırılan alternatifler manifest.alternates.json içindedir; eşleme CANONICAL.json.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
     {
-      "id": "filmmodu-wekmed",
-      "name": "FilmModu (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı full HD filmler. filmmodu.ws üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: Wekmed",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/wekmed/filmmodu.js",
-      "enabled": true,
-      "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "filmmakinesi-wekmed",
-      "name": "FilmMakinesi (wekmed)",
+      "name": "FilmMakinesi",
       "description": "FilmMakinesi.to uzerinden Turkce dublajli ve altyazili filmler.",
       "version": "1.0.1",
       "author": "patr0n",
@@ -47,26 +29,8 @@
       "supportsExternalPlayer": true
     },
     {
-      "id": "hdfilmcehennemi-wekmed",
-      "name": "HDFilmCehennemi (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı full HD film ve diziler. hdfilmcehennemi üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "Wekmed",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/wekmed/hdfilmcehennemi.js",
-      "enabled": true,
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "filmekseni-wekmed",
-      "name": "Film Ekseni (wekmed)",
+      "name": "Film Ekseni",
       "description": "Türkçe film ve diziler - filmekseni.cc",
       "version": "1.0.0",
       "author": "",
@@ -87,7 +51,7 @@
     },
     {
       "id": "m3u_provider-wekmed",
-      "name": "M3U Birleşik (wekmed)",
+      "name": "M3U Birleşik",
       "description": "birlesik.m3u dosyasından TMDB eşleştirmeli stream. Vidmody, m3u8 ve direkt linkler desteklenir.",
       "version": "1.0.0",
       "author": "Wekmed",
@@ -104,7 +68,7 @@
     },
     {
       "id": "jetfilmizle-wekmed",
-      "name": "JetFilmizle (wekmed)",
+      "name": "JetFilmizle",
       "description": "Türkçe dublaj full HD filmler. jetfilmizle.net üzerinden Pixeldrain mp4 stream sağlar.",
       "version": "1.0.0",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
@@ -122,7 +86,7 @@
     },
     {
       "id": "webteizle-wekmed",
-      "name": "WebteIzle (wekmed)",
+      "name": "WebteIzle",
       "description": "Türkçe dublaj ve altyazılı filmler ve diziler. webteizle3.xyz üzerinden VidMoly/Sibnet/FileMoon/Dzen stream sağlar.",
       "version": "1.0.0",
       "author": "port: @kerimmkirac / nuvio: Wekmed",
@@ -141,7 +105,7 @@
     },
     {
       "id": "sezonlukdizi-wekmed",
-      "name": "SezonlukDizi (wekmed)",
+      "name": "SezonlukDizi",
       "description": "Türkçe dublaj ve altyazılı diziler. sezonlukdizi8.com üzerinden VidMoly/Sibnet stream sağlar.",
       "version": "1.0.0",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
@@ -157,27 +121,10 @@
       "disabledPlatforms": []
     },
     {
-      "id": "fullhdfilmizlesene-wekmed",
-      "name": "FullHDFilmizlesene (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı full HD filmler. fullhdfilmizlesene.live üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": " nuvio: Wekmed",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/wekmed/fullhdfilmizlesene.js",
-      "enabled": true,
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "cizgimax-wekmed",
-      "name": "CizgiMax (wekmed)",
+      "name": "CizgiMax",
       "description": "Türkçe çizgi film ve animasyon dizileri. cizgimax.online üzerinden 500+ içerikle full HD stream sağlar.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
       "supportedTypes": [
         "tv"
@@ -193,7 +140,7 @@
     },
     {
       "id": "cizgivedizi-wekmed",
-      "name": "ÇizgiVeDizi (wekmed)",
+      "name": "ÇizgiVeDizi",
       "description": "Türkçe çizgi film, animasyon dizi ve filmler. cizgivedizi.com üzerinden Sibnet/MailRu/MP4Upload stream sağlar.",
       "version": "1.1.0",
       "author": "Wekmed",
@@ -211,26 +158,8 @@
       "disabledPlatforms": []
     },
     {
-      "id": "sinewix-wekmed",
-      "name": "SineWix (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı film ve diziler. SineWix üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "nuvio: Wekmed",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/wekmed/sinewix.js",
-      "enabled": true,
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "dizilife-wekmed",
-      "name": "DiziLife (wekmed)",
+      "name": "DiziLife",
       "description": "Türk dizi ve filmler — Türkçe & İngilizce ses + altyazı",
       "version": "1.0.0",
       "author": "Wekmed",
@@ -247,20 +176,6 @@
       "contentLanguage": [
         "tr"
       ]
-    },
-    {
-      "id": "diziyou-wekmed",
-      "name": "DiziYou (wekmed)",
-      "description": "Türkce dizi ve filmler — Türkçe altyazı & dublaj desteği",
-      "version": "1.0.0",
-      "author": "Nuvio uyarlaması",
-      "supportedTypes": [
-        "tv",
-        "movie"
-      ],
-      "filename": "providers/wekmed/diziyou.js",
-      "enabled": true,
-      "logo": "https://raw.githubusercontent.com/Kraptor123/domainListesi/refs/heads/main/diziyou.png"
     },
     {
       "id": "anthology_m3u",
@@ -1344,28 +1259,6 @@
       "supportsExternalPlayer": true
     },
     {
-      "id": "webteizle",
-      "name": "Webteİzle",
-      "description": "Webteİzle arşivi üzerinden Türkçe Dublaj ve Altyazılı VidMoly 1080p master HLS akışları.",
-      "version": "1.8.39",
-      "author": "falsisdev",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/anthology/webteizle.js",
-      "enabled": true,
-      "formats": [
-        "hls",
-        "m3u8"
-      ],
-      "logo": "https://www.google.com/s2/favicons?domain=webteizle.info&sz=128",
-      "contentLanguage": [
-        "tr"
-      ],
-      "supportsExternalPlayer": true
-    },
-    {
       "id": "yabancidizi",
       "name": "YabancıDizi",
       "description": "YabancıDizi arşivi üzerinden Türkçe Dublaj ve Altyazılı VidMoly 1080p master HLS akışları.",
@@ -1907,30 +1800,6 @@
       ]
     },
     {
-      "id": "animecix-turkish-nuvio",
-      "name": "Animecix (turkish-nuvio)",
-      "description": "Türkçe anime kaynağı — animecix.tv",
-      "version": "1.3.4",
-      "author": "turkish-nuvio",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/turkish-nuvio/animecix.js",
-      "enabled": true,
-      "hasSettings": true,
-      "logo": "https://animecix.tv/favicon.ico",
-      "contentLanguage": [
-        "tr"
-      ],
-      "formats": [
-        "mp4"
-      ],
-      "limited": false,
-      "disabledPlatforms": [],
-      "supportsExternalPlayer": true
-    },
-    {
       "id": "fullhdfilm",
       "name": "FullHDFilmizlesene",
       "description": "Türkçe dublaj/altyazılı film kaynağı — fullhdfilmizlesene.now",
@@ -2003,7 +1872,7 @@
     },
     {
       "id": "moonvidmodyfilmdizi-mooncrown",
-      "name": "MoonVidmodyFilmDizi (mooncrown)",
+      "name": "MoonVidmodyFilmDizi",
       "description": "En yeni filmlleri güvenli ve hızlı şekilde sunar.",
       "version": "1.0.0",
       "author": "MoOnCrOwN",
@@ -2027,7 +1896,7 @@
     },
     {
       "id": "MoOnCrOwNFilmM3U-mooncrown",
-      "name": "MoOnCrOwNFilmM3U (mooncrown)",
+      "name": "MoOnCrOwNFilmM3U",
       "description": "PowerBoard,Zerk ve  Lundeor kaynaklarından  en yeni filmlleri güvenli ve hızlı şekilde sunar.",
       "version": "1.0.0",
       "author": "MoOnCrOwN",
@@ -2049,7 +1918,7 @@
     },
     {
       "id": "MoOnCrOwNDiziM3U-mooncrown",
-      "name": "MoOnCrOwNDiziM3U (mooncrown)",
+      "name": "MoOnCrOwNDiziM3U",
       "description": "PowerBoard,Zerk  kaynaklarından  en yeni dizileri güvenli ve hızlı şekilde sunar.",
       "version": "1.0.0",
       "author": "MoOnCrOwN",
@@ -2071,7 +1940,7 @@
     },
     {
       "id": "m3u-mooncrown",
-      "name": "M3u (mooncrown)",
+      "name": "M3u",
       "description": "M3u Film, Dizi İzleme ",
       "version": "1.0.0",
       "author": "MoOnCrOwN",
@@ -2094,7 +1963,7 @@
     },
     {
       "id": "m3u.mooncrown.addon-mooncrown",
-      "name": "MoOnCrOwN M3U (mooncrown)",
+      "name": "MoOnCrOwN M3U",
       "description": "Otomatik M3U Katalog ve Yayın Eklentisi",
       "logo": "https://play-lh.googleusercontent.com/brwGNmr7IjA_MKk_TTPs0va10hdKE_bD_a1lnKoiMuCayW98EHpRv55edA6aEoJlmwfX=w240-h480",
       "version": "1.0.1",
@@ -2145,7 +2014,7 @@
     },
     {
       "id": "netmirror-mooncrown",
-      "name": "NetMirror (mooncrown)",
+      "name": "NetMirror",
       "description": "Streaming links from netmirror. Automatically disabled on iOS due to compatibility issues.",
       "version": "1.0.2",
       "author": "Nuvio Team",
@@ -2165,93 +2034,8 @@
       "supportsExternalPlayer": false
     },
     {
-      "id": "sinemacx-mooncrown",
-      "name": "SinemaCx (mooncrown)",
-      "description": "Güncel ve en iyi yabancı filmleri yüksek görüntü kalitesinde, Türkçe  dublaj ve altyazı seçenekleriyle filmleri full izleyin.",
-      "version": "1.0.0",
-      "author": "MoOnCrOwN",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/mooncrown/sinemacx.js",
-      "enabled": true,
-      "formats": [
-        "mp4",
-        "mkv",
-        "hls",
-        "m3u8"
-      ],
-      "logo": "https://www.google.com/s2/favicons?domain=www.sinema.cx&sz=%size%",
-      "contentLanguage": [
-        "tr"
-      ]
-    },
-    {
-      "id": "diziyou-mooncrown",
-      "name": "DiziYou (mooncrown)",
-      "description": "Diziyou en kaliteli Türkçe dublaj ve altyazılı yabancı dizi izleme sitesidir.",
-      "version": "1.0.4",
-      "author": "MoOnCrOwN",
-      "supportedTypes": [
-        "tv"
-      ],
-      "filename": "providers/mooncrown/diziyou.js",
-      "enabled": true,
-      "formats": [
-        "m3u8"
-      ],
-      "logo": "https://www.google.com/s2/favicons?domain=www.diziyou.co&sz=%size%",
-      "contentLanguage": [
-        "tr"
-      ]
-    },
-    {
-      "id": "fullhdfilmizlesene-mooncrown",
-      "name": "FullHdFilmizlesene (mooncrown)",
-      "description": "Sinema zevkini evinize kadar getirdik. Türkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
-      "version": "1.0.0",
-      "author": "MoOnCrOwN",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/mooncrown/fullhdfilmizlesene.js",
-      "enabled": true,
-      "formats": [
-        "mp4",
-        "mkv",
-        "hls",
-        "m3u8"
-      ],
-      "logo": "https://www.google.com/s2/favicons?domain=www.fullhdfilmizlesene.de&sz=%size%",
-      "contentLanguage": [
-        "tr"
-      ]
-    },
-    {
-      "id": "sinewix-mooncrown",
-      "name": "SineWix (mooncrown)",
-      "description": "Türkçe film, dizi ve anime - 5000+ HD içerik, Türkçe altyazılı, anime arşivi",
-      "version": "1.0.0",
-      "author": "kerimmkirac",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/mooncrown/sinewix.js",
-      "enabled": true,
-      "formats": [
-        "mp4",
-        "mkv"
-      ],
-      "logo": "https://play-lh.googleusercontent.com/brwGNmr7IjA_MKk_TTPs0va10hdKE_bD_a1lnKoiMuCayW98EHpRv55edA6aEoJlmwfX=w240-h480",
-      "contentLanguage": [
-        "tr"
-      ]
-    },
-    {
       "id": "rec-mooncrown",
-      "name": "Rec (mooncrown)",
+      "name": "Rec",
       "description": "En yeni dizileri güvenli ve hızlı şekilde sunar.",
       "version": "1.0.4",
       "author": "MoOnCrOwN",
@@ -2270,85 +2054,8 @@
       ]
     },
     {
-      "id": "jetfilmizle-mooncrown",
-      "name": "JetFilmizle (mooncrown)",
-      "description": "Türkçe dublaj full HD filmler. jetfilmizle.net üzerinden Pixeldrain mp4 stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: Wekmed",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/mooncrown/jetfilmizle.js",
-      "enabled": true,
-      "logo": "https://jetfilmizle.net/public/icons/apple-touch-icon.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "formats": [
-        "mp4",
-        "mkv"
-      ],
-      "limited": true,
-      "disabledPlatforms": []
-    },
-    {
-      "id": "sezonlukdizi-mooncrown",
-      "name": "SezonlukDizi (mooncrown)",
-      "description": "Türkçe dublaj ve altyazılı diziler.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: Wekmed",
-      "supportedTypes": [
-        "tv"
-      ],
-      "filename": "providers/mooncrown/sezonlukdizi.js",
-      "enabled": true,
-      "contentLanguage": [
-        "tr"
-      ],
-      "formats": [
-        "mp4",
-        "mkv"
-      ]
-    },
-    {
-      "id": "webteizle-mooncrown",
-      "name": "WebteIzle (mooncrown)",
-      "description": "Türkçe dublaj ve altyazılı filmler. webteizle3.xyz üzerinden VidMoly/Sibnet stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @kerimmkirac / nuvio: Wekmed",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/mooncrown/webteizle.js",
-      "enabled": true,
-      "logo": "https://webteizle3.xyz/images/logo.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": true,
-      "disabledPlatforms": []
-    },
-    {
-      "id": "filmmodu-mooncrown",
-      "name": "FilmModu (mooncrown)",
-      "description": "Türkçe dublaj ve altyazılı full HD filmler. filmmodu.ws üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: sen",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/mooncrown/filmmodu.js",
-      "enabled": true,
-      "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "altiyuzaltmisaltifilm-mooncrown",
-      "name": "AltiYuzAltmisAltiFilm (mooncrown)",
+      "name": "AltiYuzAltmisAltiFilm",
       "description": "Türkçe Dublaj ve Altyazılı Film izle",
       "version": "1",
       "author": "MoOnCrOwN",
@@ -2367,7 +2074,7 @@
     },
     {
       "id": "cinemacity-mooncrown",
-      "name": "CinemaCity (mooncrown)",
+      "name": "CinemaCity",
       "description": "Multi Language Provider",
       "version": "1.0.0",
       "author": "Nuvio Team",
@@ -2387,27 +2094,6 @@
         "hi",
         "ar",
         "tr"
-      ]
-    },
-    {
-      "id": "vidlink-mooncrown",
-      "name": "Vidlink (mooncrown)",
-      "description": "Vidlink streaming with encrypted TMDB ID support for movies and TV shows",
-      "version": "1.0.0",
-      "author": "Nuvio Team",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/mooncrown/vidlink.js",
-      "enabled": true,
-      "formats": [
-        "mp4",
-        "m3u8"
-      ],
-      "logo": "https://vidlink.pro/favicon.ico",
-      "contentLanguage": [
-        "en"
       ]
     }
   ]

@@ -57,7 +57,8 @@ function fetchTmdbInfo(tmdbId, mediaType) {
     .then(function(d) {
       return {
         titleTr: d.title || d.name || '',
-        titleEn: d.original_title || d.original_name || ''
+        titleEn: d.original_title || d.original_name || '',
+        year: parseInt(String(d.first_air_date || d.release_date || '').slice(0, 4), 10) || 0
       };
     });
 }
@@ -73,28 +74,42 @@ function searchSite(query) {
   .catch(function() { return []; });
 }
 
-function findBestMatch(results, en, tr) {
-  var nEn = normalizeStr(en), nTr = normalizeStr(tr);
+// Başlık kimliği: TMDB'de 2005 ve 2016 "Ben 10" aynı adı taşır; yıl tek ayırt edicidir.
+// Adayın adı "Ad (YYYY)" biçiminde yıl taşıyorsa TMDB yılıyla +-1 uyumlu olmalı.
+function splitYear(name) {
+  var m = /\((\d{4})\)\s*$/.exec(name || '');
+  return { base: (name || '').replace(/\(\d{4}\)\s*$/, ''), year: m ? parseInt(m[1], 10) : 0 };
+}
+
+function scoreCandidate(r, en, tr, year) {
+  var sp = splitYear(r.name), ni = normalizeStr(sp.base), sc = 0;
+  if (!ni) return 0;
+  var exact = (ni === normalizeStr(en) || ni === normalizeStr(tr));
+  if (exact) sc = 100;
+  else {
+    // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
+    var pre = [en, tr].map(function(s) { return normalizeStr((s || '').split(':')[0]); });
+    if (pre[0] === ni || pre[1] === ni) sc = 60;
+  }
+  if (!sc) return 0;
+  if (sp.year && year) {
+    if (Math.abs(sp.year - year) > 1) return 0;
+    sc += 10;
+  }
+  return sc;
+}
+
+function findBestMatch(results, en, tr, year) {
   var best = null, bestScore = 0;
-  results.forEach(function(r) {
-    if (r.kind === 'film') return; // film değil dizi istiyoruz
-    var ni = normalizeStr(r.name), sc = 0;
-    if (ni === nEn || ni === nTr)                                        sc += 100;
-    else if (nEn && (ni.indexOf(nEn) !== -1 || nEn.indexOf(ni) !== -1)) sc += 65;
-    else if (nTr && (ni.indexOf(nTr) !== -1 || nTr.indexOf(ni) !== -1)) sc += 60;
-    if (sc > bestScore) { bestScore = sc; best = r; }
-  });
-  // Film de kabul et eğer dizi bulunamazsa
-  if (!best) {
+  [false, true].forEach(function(allowFilm) {
+    if (best) return;
     results.forEach(function(r) {
-      var ni = normalizeStr(r.name), sc = 0;
-      if (ni === nEn || ni === nTr) sc += 100;
-      else if (nEn && (ni.indexOf(nEn) !== -1 || nEn.indexOf(ni) !== -1)) sc += 65;
-      else if (nTr && (ni.indexOf(nTr) !== -1 || nTr.indexOf(ni) !== -1)) sc += 60;
+      if ((r.kind === 'film') !== allowFilm) return;
+      var sc = scoreCandidate(r, en, tr, year);
       if (sc > bestScore) { bestScore = sc; best = r; }
     });
-  }
-  return bestScore >= 55 ? best : null;
+  });
+  return bestScore >= 60 ? best : null;
 }
 
 // ── Bölüm URL oluştur ─────────────────────────────────────────
@@ -280,10 +295,10 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
       return searchSite(info.titleEn || info.titleTr)
         .then(function(results) {
           console.log('[CizgiMax] Arama: ' + results.length + ' sonuc');
-          var best = findBestMatch(results, info.titleEn, info.titleTr);
+          var best = findBestMatch(results, info.titleEn, info.titleTr, info.year);
           if (!best && info.titleTr && info.titleTr !== info.titleEn) {
             return searchSite(info.titleTr).then(function(r2) {
-              return findBestMatch(r2, info.titleEn, info.titleTr);
+              return findBestMatch(r2, info.titleEn, info.titleTr, info.year);
             });
           }
           return best;

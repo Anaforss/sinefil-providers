@@ -1,0 +1,200 @@
+{
+  "manifestVersion": "1.0.2",
+  "before": 78,
+  "after": 62,
+  "removed": 16,
+  "groups": [
+    {
+      "group": "filmmodu",
+      "keptId": "filmmodu",
+      "removedIds": [
+        "filmmodu-wekmed",
+        "filmmodu-mooncrown"
+      ],
+      "reason": "Anthology: geçmişte HLS doğrulanmış; diğer ikisi tanınmayan/doğrulanmamış (evidence: historical HLS validation)",
+      "keptNameBefore": "FilmModu",
+      "removedNames": [
+        "FilmModu (wekmed)",
+        "FilmModu (mooncrown)"
+      ],
+      "files": {
+        "filmmodu": "providers/anthology/filmmodu.js",
+        "filmmodu-wekmed": "providers/wekmed/filmmodu.js",
+        "filmmodu-mooncrown": "providers/mooncrown/filmmodu.js"
+      }
+    },
+    {
+      "group": "hdfilmcehennemi",
+      "keptId": "hdfilmcehennemi",
+      "removedIds": [
+        "hdfilmcehennemi-wekmed"
+      ],
+      "reason": "İkisi de engelli (kanıt yok); belirleyici kural: Anthology 1.8.39 sürekli bakımlı, uygulama uyumlu taban; daha iyi olduğu iddia edilmez",
+      "keptNameBefore": "HDFilmCehennemi",
+      "removedNames": [
+        "HDFilmCehennemi (wekmed)"
+      ],
+      "files": {
+        "hdfilmcehennemi": "providers/anthology/hdfilmcehennemi.js",
+        "hdfilmcehennemi-wekmed": "providers/wekmed/hdfilmcehennemi.js"
+      }
+    },
+    {
+      "group": "jetfilmizle",
+      "keptId": "jetfilmizle-wekmed",
+      "removedIds": [
+        "jetfilmizle-mooncrown"
+      ],
+      "reason": "Aynı alan adı/akış mantığı; kanıt yok; belirleyici kural: Wekmed (daha küçük, aynı jetfilmizle.net; kanıtsız)",
+      "keptNameBefore": "JetFilmizle (wekmed)",
+      "removedNames": [
+        "JetFilmizle (mooncrown)"
+      ],
+      "files": {
+        "jetfilmizle-wekmed": "providers/wekmed/jetfilmizle.js",
+        "jetfilmizle-mooncrown": "providers/mooncrown/jetfilmizle.js"
+      }
+    },
+    {
+      "group": "webteizle",
+      "keptId": "webteizle-wekmed",
+      "removedIds": [
+        "webteizle",
+        "webteizle-mooncrown"
+      ],
+      "reason": "Wekmed en geniş çıkarıcı kapsamı (36 KB; mail.ru/filemoon/398fitus) ; çalışır olduğu iddia edilmez",
+      "keptNameBefore": "WebteIzle (wekmed)",
+      "removedNames": [
+        "Webteİzle",
+        "WebteIzle (mooncrown)"
+      ],
+      "files": {
+        "webteizle-wekmed": "providers/wekmed/webteizle.js",
+        "webteizle": "providers/anthology/webteizle.js",
+        "webteizle-mooncrown": "providers/mooncrown/webteizle.js"
+      }
+    },
+    {
+      "group": "sezonlukdizi",
+      "keptId": "sezonlukdizi-wekmed",
+      "removedIds": [
+        "sezonlukdizi-mooncrown"
+      ],
+      "reason": "Wekmed geçerli sezonlukdizi.cc; Mooncrown sezonlukdizi8.com (kendinden imzalı sertifika bildirildi); çıkarma test edilmedi",
+      "keptNameBefore": "SezonlukDizi (wekmed)",
+      "removedNames": [
+        "SezonlukDizi (mooncrown)"
+      ],
+      "files": {
+        "sezonlukdizi-wekmed": "providers/wekmed/sezonlukdizi.js",
+        "sezonlukdizi-mooncrown": "providers/mooncrown/sezonlukdizi.js"
+      }
+    },
+    {
+      "group": "fullhdfilmizlesene",
+      "keptId": "fullhdfilm",
+      "removedIds": [
+        "fullhdfilmizlesene-wekmed",
+        "fullhdfilmizlesene-mooncrown"
+      ],
+      "reason": "turkish-nuvio 1.4.1 sürümlü ve en geniş (39 KB); kanıtsız seçim, çalıştığı iddia edilmez",
+      "keptNameBefore": "FullHDFilmizlesene",
+      "removedNames": [
+        "FullHDFilmizlesene (wekmed)",
+        "FullHdFilmizlesene (mooncrown)"
+      ],
+      "files": {
+        "fullhdfilm": "providers/turkish-nuvio/fullhdfilm.js",
+        "fullhdfilmizlesene-wekmed": "providers/wekmed/fullhdfilmizlesene.js",
+        "fullhdfilmizlesene-mooncrown": "providers/mooncrown/fullhdfilmizlesene.js"
+      }
+    },
+    {
+      "group": "sinewix",
+      "keptId": "sinewix",
+      "removedIds": [
+        "sinewix-wekmed",
+        "sinewix-mooncrown"
+      ],
+      "reason": "Anthology en kapsamlı (24 KB), aynı ydfvfdizipanel.ru arka ucu",
+      "keptNameBefore": "SineWix",
+      "removedNames": [
+        "SineWix (wekmed)",
+        "SineWix (mooncrown)"
+      ],
+      "files": {
+        "sinewix": "providers/anthology/sinewix.js",
+        "sinewix-wekmed": "providers/wekmed/sinewix.js",
+        "sinewix-mooncrown": "providers/mooncrown/sinewix.js"
+      }
+    },
+    {
+      "group": "diziyou",
+      "keptId": "diziyou",
+      "removedIds": [
+        "diziyou-wekmed",
+        "diziyou-mooncrown"
+      ],
+      "reason": "Anthology ana hat; üçü aynı diziyou.one",
+      "keptNameBefore": "DiziYou",
+      "removedNames": [
+        "DiziYou (wekmed)",
+        "DiziYou (mooncrown)"
+      ],
+      "files": {
+        "diziyou": "providers/anthology/diziyou.js",
+        "diziyou-wekmed": "providers/wekmed/diziyou.js",
+        "diziyou-mooncrown": "providers/mooncrown/diziyou.js"
+      }
+    },
+    {
+      "group": "vidlink",
+      "keptId": "vidlink",
+      "removedIds": [
+        "vidlink-mooncrown"
+      ],
+      "reason": "Anthology 4 mp4 doğrulandı (manifest.verified); Moon istek göndermedi",
+      "keptNameBefore": "Vidlink",
+      "removedNames": [
+        "Vidlink (mooncrown)"
+      ],
+      "files": {
+        "vidlink": "providers/anthology/vidlink.js",
+        "vidlink-mooncrown": "providers/mooncrown/vidlink.js"
+      }
+    },
+    {
+      "group": "sinemacx",
+      "keptId": "sinemacx",
+      "removedIds": [
+        "sinemacx-mooncrown"
+      ],
+      "reason": "Anthology gerçek motorla HLS iyi (manifest.verified); Moon hiçbir şey vermedi",
+      "keptNameBefore": "SinemaCX",
+      "removedNames": [
+        "SinemaCx (mooncrown)"
+      ],
+      "files": {
+        "sinemacx": "providers/anthology/sinemacx.js",
+        "sinemacx-mooncrown": "providers/mooncrown/sinemacx.js"
+      }
+    },
+    {
+      "group": "animecix",
+      "keptId": "animecix",
+      "removedIds": [
+        "animecix-turkish-nuvio"
+      ],
+      "reason": "İkisi engelli; kaldırılan anahtar yüzünden yapılandırma gerekli; belirleyici kural: Anthology daha zengin yetenek (v1.8.39, ANIMECIX_XEH_KEY ile) ; çalışıyor iddiası yok",
+      "keptNameBefore": "AnimeciX",
+      "removedNames": [
+        "Animecix (turkish-nuvio)"
+      ],
+      "files": {
+        "animecix": "providers/anthology/animecix.js",
+        "animecix-turkish-nuvio": "providers/turkish-nuvio/animecix.js"
+      }
+    }
+  ],
+  "note": "Kaldırılan dosyalar depoda tutulur (kaynak izi, SOURCES.json); id'ler değişmedi. Seçimler çalışırlık kanıtı değildir; kanıt katmanı reason alanında."
+}

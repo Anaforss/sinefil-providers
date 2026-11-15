@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""Standalone guard: main manifest is one-entry-per-site, selectable, hash-consistent. Run: python3 tests/test_manifest_dedupe.py"""
+import hashlib, json, os, unittest
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+J = lambda n: json.load(open(os.path.join(R, n), encoding="utf-8"))
+
+class T(unittest.TestCase):
+    def setUp(self):
+        self.m = J("manifest.json"); self.s = self.m["scrapers"]
+        self.c = J("CANONICAL.json"); self.src = {x["file"]: x for x in J("SOURCES.json")}
+    def test_ids_unique(self):
+        ids = [x["id"] for x in self.s]; self.assertEqual(len(ids), len(set(ids)))
+    def test_all_selectable(self):
+        self.assertTrue(all(x["enabled"] is True for x in self.s))
+    def test_files_and_hashes(self):
+        for x in self.s:
+            p = os.path.join(R, x["filename"]); self.assertTrue(os.path.isfile(p), x["id"])
+            self.assertEqual(hashlib.sha256(open(p, "rb").read()).hexdigest(), self.src[x["filename"]]["vendoredSha256"], x["id"])
+    def test_groups_kept_present_removed_absent(self):
+        ids = {x["id"] for x in self.s}
+        for g in self.c["groups"]:
+            self.assertIn(g["keptId"], ids)
+            for r in g["removedIds"]: self.assertNotIn(r, ids)
+        self.assertEqual(self.c["after"], len(self.s))
+        self.assertEqual(self.c["before"] - self.c["after"], sum(len(g["removedIds"]) for g in self.c["groups"]))
+    def test_alternates_are_exactly_removed(self):
+        alt = {x["id"] for x in J("manifest.alternates.json")["scrapers"]}
+        self.assertEqual(alt, {r for g in self.c["groups"] for r in g["removedIds"]})
+        self.assertFalse(alt & {x["id"] for x in self.s})
+    def test_verified_subset_kept(self):
+        ids = {x["id"] for x in self.s}
+        for x in J("manifest.verified.json")["scrapers"]: self.assertIn(x["id"], ids)
+    def test_no_variant_suffix_in_names(self):
+        for x in self.s: self.assertNotRegex(x["name"].lower(), r"\((wekmed|mooncrown|anthology)\)|turkish-nuvio\)") if x["id"] in {g["keptId"] for g in self.c["groups"]} else None
+    def test_cizgimax_version_bumped(self):
+        self.assertEqual({x["id"]: x["version"] for x in self.s}["cizgimax-wekmed"], "1.0.1")
+if __name__ == "__main__": unittest.main()
