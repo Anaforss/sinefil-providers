@@ -6,7 +6,7 @@ J = lambda n: json.load(open(os.path.join(R, n), encoding="utf-8"))
 
 class T(unittest.TestCase):
     def setUp(self):
-        self.m = J("manifest.json"); self.s = self.m["scrapers"]
+        self.m = J("manifest.all-sources.json"); self.s = self.m["scrapers"]; self.main = J("manifest.json")["scrapers"]
         self.c = J("CANONICAL.json"); self.src = {x["file"]: x for x in J("SOURCES.json")}
     def test_ids_unique(self):
         ids = [x["id"] for x in self.s]; self.assertEqual(len(ids), len(set(ids)))
@@ -32,6 +32,17 @@ class T(unittest.TestCase):
         for x in J("manifest.verified.json")["scrapers"]: self.assertIn(x["id"], ids)
     def test_no_variant_suffix_in_names(self):
         for x in self.s: self.assertNotRegex(x["name"].lower(), r"\((wekmed|mooncrown|anthology)\)|turkish-nuvio\)") if x["id"] in {g["keptId"] for g in self.c["groups"]} else None
-    def test_cizgimax_version_bumped(self):
-        self.assertEqual({x["id"]: x["version"] for x in self.s}["cizgimax-wekmed"], "1.0.3")
+    def test_main_manifest_is_cizgimax_only(self):
+        # GEÇİCİ: ana manifest yalnızca ÇizgiMax; tüm 62 kaynak manifest.all-sources.json'da saklı (geri alınabilir).
+        self.assertEqual([x["id"] for x in self.main], ["cizgimax-wekmed"])
+        self.assertTrue(self.main[0]["enabled"] is True)
+        full = {x["id"]: x for x in self.s}
+        self.assertEqual(len(full), 62)
+        self.assertEqual(self.main[0]["version"], "1.0.4")
+        self.assertEqual(self.main[0]["filename"], full["cizgimax-wekmed"]["filename"])
+        self.assertEqual(J("manifest.json")["version"], J("manifest.all-sources.json")["version"])
+        for x in self.main:
+            self.assertEqual(hashlib.sha256(open(os.path.join(R, x["filename"]), "rb").read()).hexdigest(), self.src[x["filename"]]["vendoredSha256"])
+    def test_all_sources_reference_existing_files(self):
+        for x in self.s: self.assertTrue(os.path.isfile(os.path.join(R, x["filename"])), x["id"])
 if __name__ == "__main__": unittest.main()

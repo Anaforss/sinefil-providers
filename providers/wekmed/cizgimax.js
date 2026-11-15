@@ -207,7 +207,7 @@ function extractDzen(oynatUrl, epUrl) {
         return null;
       }
       console.log('[CizgiMax] Dzen DASH: ' + info.quality + (info.hasAudio ? ' +ses' : ' sessiz'));
-      return { url: mpdUrl, quality: info.quality, headers: headers };
+      return { url: mpdUrl, quality: info.quality, heights: info.heights, headers: headers };
     });
   })
   .catch(function(e) {
@@ -223,28 +223,38 @@ function decodeEmbedUrl(u) {
 }
 
 // Standart DASH MPD doğrulaması: <MPD> kökü + en az bir video Representation.
-// Öznitelik sırası/kalite özniteliği varsayılmaz.
+// Öznitelik sırası/kalite özniteliği varsayılmaz. Her GERÇEK video yüksekliği ayrı listelenir
+// (aynı yükseklikte AVC öncelikli); ses AdaptationSet'leri MPD'de olduğu gibi kalır.
 function inspectMpd(xml) {
   if (!xml || !/<MPD[\s>]/.test(xml)) return null;
-  var best = null, hasAudio = false;
+  var byHeight = {}, noHeightBest = null, hasAudio = false;
   var setRe = /<AdaptationSet\b([^>]*)>([\s\S]*?)<\/AdaptationSet>/g, sm;
   function attr(t, n) { var m = new RegExp('\\b' + n + '="([^"]*)"').exec(t); return m ? m[1] : ''; }
   while ((sm = setRe.exec(xml)) !== null) {
     var setType = attr(sm[1], 'mimeType') + ' ' + attr(sm[1], 'contentType');
     var repRe = /<Representation\b([^>]*)>/g, rm;
     while ((rm = repRe.exec(sm[2])) !== null) {
-      var t = setType + ' ' + attr(rm[1], 'mimeType') + ' ' + attr(rm[1], 'codecs');
+      var codecs = attr(rm[1], 'codecs');
+      var t = setType + ' ' + attr(rm[1], 'mimeType') + ' ' + codecs;
       var bw = parseInt(attr(rm[1], 'bandwidth'), 10) || 0;
       var h = parseInt(attr(rm[1], 'height'), 10) || 0;
       if (/audio|mp4a|opus/i.test(t) && !h) { hasAudio = true; continue; }
       if (/video|avc|hev|vp0?9|av01/i.test(t) || h) {
-        if (!best || bw > best.bw) best = { bw: bw, h: h };
+        var rep = { bw: bw, h: h, avc: /avc1/i.test(codecs) };
+        if (!h) { if (!noHeightBest || bw > noHeightBest.bw) noHeightBest = rep; continue; }
+        var cur = byHeight[h];
+        if (!cur || (rep.avc && !cur.avc) || (rep.avc === cur.avc && bw > cur.bw)) byHeight[h] = rep;
       }
     }
   }
-  if (!best) return null;
-  return { quality: best.h ? best.h + 'p' : 'Auto', hasAudio: hasAudio };
+  var heights = Object.keys(byHeight).map(Number).sort(function(x, y) { return y - x; });
+  if (!heights.length && !noHeightBest) return null;
+  return { heights: heights, quality: heights.length ? heights[0] + 'p' : 'Auto', hasAudio: hasAudio };
 }
+
+// Seçim isteği: URL parçası (fragment) — sunucuya gönderilmez. Oynatıcı bunu görünce
+// yalnızca o yükseklikteki video track'ini seçer (ses track'i korunur).
+var QUALITY_FRAGMENT = '#sinefil-video-height=';
 
 // ── Bölüm stream'lerini çıkar ────────────────────────────────
 function fetchEpisodeStreams(epUrl) {
@@ -286,12 +296,17 @@ function fetchEpisodeStreams(epUrl) {
             var label = server.label || 'Dzen';
             return extractDzen(server.src, epUrl).then(function(dzen) {
               if (!dzen) return;
-              results.push({
-                name:    'CizgiMax',
-                title:   '⌜ CİZGİMAX ⌟ | ' + label,
-                url:     dzen.url,
-                quality: dzen.quality || 'Auto',
-                headers: dzen.headers || { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' }
+              var base = { name: 'CizgiMax', headers: dzen.headers || { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' } };
+              var hs = dzen.heights || [];
+              if (hs.length < 2) {
+                // Seçilecek tek bir yükseklik var: tek giriş, kısıtlama yok
+                results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label, url: dzen.url, quality: dzen.quality || 'Auto' }, base));
+                return;
+              }
+              // Auto: özgün MPD (uyarlanabilir); sonra her gerçek yükseklik için ayrı seçim isteği
+              results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | Auto', url: dzen.url, quality: 'Auto' }, base));
+              hs.forEach(function(h) {
+                results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | ' + h + 'p', url: dzen.url + QUALITY_FRAGMENT + h, quality: h + 'p' }, base));
               });
             });
           }

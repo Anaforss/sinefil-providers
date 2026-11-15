@@ -36,12 +36,13 @@ new Function('module', 'fetch', 'console', 'globalThis', code)(mod, fakeFetch, {
   assert.ok(v, 'Vidmoly stream missing (iframes were all treated as Dzen): ' + JSON.stringify(titles));
   assert.ok(/\.m3u8/.test(v.url) && v.headers.Referer.indexOf('vidmoly.to') !== -1, 'vidmoly url/referer');
   assert.ok(!('Origin' in v.headers) || v.headers.Origin.indexOf('dzen') === -1, 'Vidmoly must not carry Dzen Origin');
-  const d = res.find(r => /Dzen/.test(r.title));
-  assert.strictEqual(d.url, 'https://vd1.okcdn.ru/?dzen_dash=dash&x=1', 'must return the real MPD url, \\u0026 decoded: ' + d.url);
+  const d = res.find(r => /Dzen/.test(r.title) && r.quality === '720p');
+  assert.strictEqual(d.url.split('#')[0], 'https://vd1.okcdn.ru/?dzen_dash=dash&x=1', 'must return the real MPD url, \\u0026 decoded: ' + d.url);
   assert.strictEqual(d.quality, '720p');
   assert.strictEqual(d.headers.Referer, 'https://dzen.ru/');
   assert.strictEqual(d.headers.Origin, 'https://dzen.ru');
-  assert.strictEqual(res.length, 2, 'unknown host must be ignored, got ' + res.length);
+  assert.ok(!res.some(r => /Bilinmeyen/.test(r.title)), 'unknown host must be ignored');
+  assert.strictEqual(res.filter(r => /Dzen/.test(r.title)).length, 3, 'Auto + 720p + 360p');
   assert.ok(!logs.join('\n').includes('SYNTH_'), 'logs must not contain tokens');
   console.log('OK', titles.join(' | '));
 })().catch(e => { console.error('FAIL', e.message); process.exit(1); });
