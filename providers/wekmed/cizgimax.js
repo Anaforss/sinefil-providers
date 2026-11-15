@@ -138,7 +138,7 @@ function parseServers(html) {
 
 // ── Dzen embed → DASH MPD → en iyi kalite URL ────────────────
 // /oynat/?t=TOKEN → 302 → https://dzen.ru/embed/ID
-// Dzen embed HTML → MPD URL → XML parse → en yüksek bandwidth Representation
+// Dzen embed HTML → MPD URL → doğrulama → manifest URL'si (ses+video korunur)
 // Yönlendirme sonrası gerçek sunucu adından (etiketten değil) oynatıcı türü
 function hostKind(u) {
   var m = /^https?:\/\/([^\/:?#]+)/i.exec(u || '');
@@ -192,54 +192,58 @@ function extractDzen(oynatUrl, epUrl) {
 
     console.log('[CizgiMax] Dzen MPD: ' + mpdUrl.slice(0, 80));
 
-    // MPD fetch → XML parse → en yüksek kalite URL
-    return fetch(mpdUrl, {
-      headers: { 'Referer': 'https://dzen.ru/', 'Origin': 'https://dzen.ru' }
-    })
+    // HTML/JSON içinde kaçışlı olabilir (\u0026, \/, &amp;) — tırnaklı JSON literali olarak çöz
+    mpdUrl = decodeEmbedUrl(mpdUrl);
+    console.log('[CizgiMax] Dzen MPD bulundu');
+    var headers = { 'Referer': 'https://dzen.ru/', 'Origin': 'https://dzen.ru', 'User-Agent': HEADERS['User-Agent'] };
+
+    // MPD fetch → doğrula → MANİFESTİN KENDİSİNİ döndür (ses+video korunur, oynatıcı DASH'i çözer)
+    return fetch(mpdUrl, { headers: headers })
     .then(function(r2) { return r2.text(); })
     .then(function(xml) {
-      // Representation'ları bul — bandwidth'e göre sırala
-      var repRe = /Representation[^>]+bandwidth="(\d+)"[^>]+quality="([^"]+)"[^>]*>[\s\S]*?<BaseURL>([^<]+)<\/BaseURL>/g;
-      var reps = [], m;
-      while ((m = repRe.exec(xml)) !== null) {
-        reps.push({
-          bandwidth: parseInt(m[1]),
-          quality:   m[2],
-          params:    m[3]  // query string kısmı
-        });
-      }
-
-      if (!reps.length) {
-        console.log('[CizgiMax] Dzen MPD Representation bulunamadi');
+      var info = inspectMpd(xml);
+      if (!info) {
+        console.log('[CizgiMax] Dzen MPD gecerli degil / video Representation yok');
         return null;
       }
-
-      // Sadece video track'leri al (audio değil)
-      var videoReps = reps.filter(function(r) { return r.bandwidth > 100000; });
-      if (!videoReps.length) videoReps = reps;
-
-      // Yüksekten düşüğe sırala — en yüksek kalite
-      videoReps.sort(function(a, b) { return b.bandwidth - a.bandwidth; });
-
-      var best = videoReps[0];
-      // BaseURL genellikle query string — tam URL = mpdUrl'nin base'i + params
-      var baseUrl = mpdUrl.split('?')[0];
-      var finalUrl = baseUrl + best.params;
-
-      var qualityMap = {
-        'full': '1080p', 'hd': '720p', 'sd': '480p',
-        'low': '360p', 'lowest': '240p', 'mobile': '144p'
-      };
-      var quality = qualityMap[best.quality] || best.quality || 'Auto';
-
-      console.log('[CizgiMax] Dzen stream: ' + quality + ' → ' + finalUrl.slice(0, 80));
-      return { url: finalUrl, quality: quality, referer: 'https://dzen.ru/' };
+      console.log('[CizgiMax] Dzen DASH: ' + info.quality + (info.hasAudio ? ' +ses' : ' sessiz'));
+      return { url: mpdUrl, quality: info.quality, headers: headers };
     });
   })
   .catch(function(e) {
     console.log('[CizgiMax] Dzen hata: ' + (e.message || String(e)));
     return null;
   });
+}
+
+function decodeEmbedUrl(u) {
+  var v = u;
+  try { v = JSON.parse('"' + String(u).replace(/"/g, '\\"') + '"'); } catch (e) { v = u; }
+  return v.replace(/&amp;/g, '&');
+}
+
+// Standart DASH MPD doğrulaması: <MPD> kökü + en az bir video Representation.
+// Öznitelik sırası/kalite özniteliği varsayılmaz.
+function inspectMpd(xml) {
+  if (!xml || !/<MPD[\s>]/.test(xml)) return null;
+  var best = null, hasAudio = false;
+  var setRe = /<AdaptationSet\b([^>]*)>([\s\S]*?)<\/AdaptationSet>/g, sm;
+  function attr(t, n) { var m = new RegExp('\\b' + n + '="([^"]*)"').exec(t); return m ? m[1] : ''; }
+  while ((sm = setRe.exec(xml)) !== null) {
+    var setType = attr(sm[1], 'mimeType') + ' ' + attr(sm[1], 'contentType');
+    var repRe = /<Representation\b([^>]*)>/g, rm;
+    while ((rm = repRe.exec(sm[2])) !== null) {
+      var t = setType + ' ' + attr(rm[1], 'mimeType') + ' ' + attr(rm[1], 'codecs');
+      var bw = parseInt(attr(rm[1], 'bandwidth'), 10) || 0;
+      var h = parseInt(attr(rm[1], 'height'), 10) || 0;
+      if (/audio|mp4a|opus/i.test(t) && !h) { hasAudio = true; continue; }
+      if (/video|avc|hev|vp0?9|av01/i.test(t) || h) {
+        if (!best || bw > best.bw) best = { bw: bw, h: h };
+      }
+    }
+  }
+  if (!best) return null;
+  return { quality: best.h ? best.h + 'p' : 'Auto', hasAudio: hasAudio };
 }
 
 // ── Bölüm stream'lerini çıkar ────────────────────────────────
