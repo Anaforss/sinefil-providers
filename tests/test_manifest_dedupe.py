@@ -2,7 +2,11 @@
 """Standalone guard: main manifest is one-entry-per-site, selectable, hash-consistent. Run: python3 tests/test_manifest_dedupe.py"""
 import hashlib, json, os, unittest
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-J = lambda n: json.load(open(os.path.join(R, n), encoding="utf-8"))
+def J(n):
+    with open(os.path.join(R, n), encoding="utf-8") as f: return json.load(f)
+
+def _rb(p):
+    with open(p, "rb") as f: return f.read()
 
 class T(unittest.TestCase):
     def setUp(self):
@@ -15,7 +19,7 @@ class T(unittest.TestCase):
     def test_files_and_hashes(self):
         for x in self.s:
             p = os.path.join(R, x["filename"]); self.assertTrue(os.path.isfile(p), x["id"])
-            self.assertEqual(hashlib.sha256(open(p, "rb").read()).hexdigest(), self.src[x["filename"]]["vendoredSha256"], x["id"])
+            self.assertEqual(hashlib.sha256(_rb(p)).hexdigest(), self.src[x["filename"]]["vendoredSha256"], x["id"])
     def test_groups_kept_present_removed_absent(self):
         ids = {x["id"] for x in self.s}
         for g in self.c["groups"]:
@@ -38,7 +42,7 @@ class T(unittest.TestCase):
         self.assertTrue(self.main[0]["enabled"] is True)
         full = {x["id"]: x for x in self.s}
         self.assertEqual(len(full), 62)
-        self.assertEqual(self.main[0]["version"], "1.0.4")
+        self.assertEqual(self.main[0]["version"], "1.0.5")
         self.assertEqual(self.main[0]["filename"], full["cizgimax-wekmed"]["filename"])
         self.assertEqual(J("manifest.json")["version"], J("manifest.all-sources.json")["version"])
         for x in self.main:

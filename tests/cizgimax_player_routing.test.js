@@ -8,7 +8,7 @@ const servers = [
   { type: 'iframe', src: '/oynat/?t=SYNTH_VIDMOLY', label: 'Vidmoly', lang: 'dub', embedId: 2 },
   { type: 'iframe', src: '/oynat/?t=SYNTH_OTHER', label: 'Bilinmeyen', lang: 'dub', embedId: 3 },
 ];
-const page = '<script>var servers = JSON.parse(atob("' + Buffer.from(JSON.stringify(servers)).toString('base64') + '"));</script>';
+let page = '<script>var servers = JSON.parse(atob("' + Buffer.from(JSON.stringify(servers)).toString('base64') + '"));</script>';
 const mod = { exports: {} };
 const logs = [];
 const respond = (url, body) => ({ ok: true, status: 200, url, text: () => Promise.resolve(body), json: () => Promise.resolve({}) });
@@ -32,16 +32,21 @@ new Function('module', 'fetch', 'console', 'globalThis', code)(mod, fakeFetch, {
   const res = await f('https://cizgimax.online/ben-10-1-sezon-1-bolum-izle/');
   const titles = res.map(r => r.title);
   assert.ok(titles.some(t => /Dzen/.test(t)), 'Dzen stream missing: ' + JSON.stringify(titles));
-  const v = res.find(r => /Vidmoly/.test(r.title));
-  assert.ok(v, 'Vidmoly stream missing (iframes were all treated as Dzen): ' + JSON.stringify(titles));
+  // Hız: Dzen başarılıyken Vidmoly çözülmez (yalnızca yedek)
+  assert.ok(!res.some(r => /Vidmoly/.test(r.title)), 'Vidmoly Dzen varken istenmemeli');
+  // Dzen yoksa Vidmoly yönlendirme ana makinesinden doğru türle çözülür; bilinmeyen ana makine yok sayılır
+  page = '<script>var servers = JSON.parse(atob("' + Buffer.from(JSON.stringify([servers[1], servers[2]])).toString('base64') + '"));</script>';
+  const res2 = await f('https://cizgimax.online/ben-10-1-sezon-1-bolum-izle/');
+  const v = res2.find(r => /Vidmoly/.test(r.title));
+  assert.ok(v, 'Vidmoly fallback missing: ' + JSON.stringify(res2.map(r => r.title)));
   assert.ok(/\.m3u8/.test(v.url) && v.headers.Referer.indexOf('vidmoly.to') !== -1, 'vidmoly url/referer');
   assert.ok(!('Origin' in v.headers) || v.headers.Origin.indexOf('dzen') === -1, 'Vidmoly must not carry Dzen Origin');
+  assert.ok(!res2.some(r => /Bilinmeyen/.test(r.title)), 'unknown host must be ignored');
   const d = res.find(r => /Dzen/.test(r.title) && r.quality === '720p');
   assert.strictEqual(d.url.split('#')[0], 'https://vd1.okcdn.ru/?dzen_dash=dash&x=1', 'must return the real MPD url, \\u0026 decoded: ' + d.url);
   assert.strictEqual(d.quality, '720p');
   assert.strictEqual(d.headers.Referer, 'https://dzen.ru/');
   assert.strictEqual(d.headers.Origin, 'https://dzen.ru');
-  assert.ok(!res.some(r => /Bilinmeyen/.test(r.title)), 'unknown host must be ignored');
   assert.strictEqual(res.filter(r => /Dzen/.test(r.title)).length, 3, 'Auto + 720p + 360p');
   assert.ok(!logs.join('\n').includes('SYNTH_'), 'logs must not contain tokens');
   console.log('OK', titles.join(' | '));

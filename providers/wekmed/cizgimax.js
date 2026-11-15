@@ -256,6 +256,40 @@ function inspectMpd(xml) {
 // yalnızca o yükseklikteki video track'ini seçer (ses track'i korunur).
 var QUALITY_FRAGMENT = '#sinefil-video-height=';
 
+// Tek sunucuyu çöz → sonuç girişleri dizisi (başarısızsa [])
+function resolveServer(server, epUrl) {
+  var label;
+  // Sibnet — direkt streamUrl MP4
+  if (server.type === 'sibnet' && server.streamUrl) {
+    var streamUrl = server.streamUrl.startsWith('http') ? server.streamUrl : MAIN_URL + server.streamUrl;
+    label = server.label || 'Sibnet';
+    return Promise.resolve([{
+      name: 'CizgiMax', title: '⌜ CİZGİMAX ⌟ | ' + label, url: streamUrl, quality: 'Auto',
+      headers: { 'Referer': epUrl, 'User-Agent': HEADERS['User-Agent'] }
+    }]);
+  }
+  // iframe (Dzen/Vidmoly) — /oynat/?t= → 302 → MPD/m3u8
+  if (server.type === 'iframe' && server.src) {
+    label = server.label || 'Dzen';
+    return extractDzen(server.src, epUrl).then(function(dzen) {
+      if (!dzen || !dzen.url) return [];
+      var out = [];
+      var base = { name: 'CizgiMax', headers: dzen.headers || { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' } };
+      var hs = dzen.heights || [];
+      if (hs.length < 2) {
+        out.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label, url: dzen.url, quality: dzen.quality || 'Auto' }, base));
+        return out;
+      }
+      out.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | Auto', url: dzen.url, quality: 'Auto' }, base));
+      hs.forEach(function(h) {
+        out.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | ' + h + 'p', url: dzen.url + QUALITY_FRAGMENT + h, quality: h + 'p' }, base));
+      });
+      return out;
+    });
+  }
+  return Promise.resolve([]);
+}
+
 // ── Bölüm stream'lerini çıkar ────────────────────────────────
 function fetchEpisodeStreams(epUrl) {
   return fetch(epUrl, { headers: HEADERS })
@@ -269,53 +303,18 @@ function fetchEpisodeStreams(epUrl) {
         return [];
       }
 
-      var results = [];
-      var chain   = Promise.resolve();
-
-      servers.forEach(function(server) {
-        chain = chain.then(function() {
-
-          // Sibnet — direkt streamUrl MP4
-          if (server.type === 'sibnet' && server.streamUrl) {
-            var streamUrl = server.streamUrl.startsWith('http')
-              ? server.streamUrl
-              : MAIN_URL + server.streamUrl;
-            var label = server.label || 'Sibnet';
-            results.push({
-              name:    'CizgiMax',
-              title:   '⌜ CİZGİMAX ⌟ | ' + label,
-              url:     streamUrl,
-              quality: 'Auto',
-              headers: { 'Referer': epUrl, 'User-Agent': HEADERS['User-Agent'] }
-            });
-            return Promise.resolve();
-          }
-
-          // iframe (Dzen) — /oynat/?t= → 302 → MPD
-          if (server.type === 'iframe' && server.src) {
-            var label = server.label || 'Dzen';
-            return extractDzen(server.src, epUrl).then(function(dzen) {
-              if (!dzen) return;
-              var base = { name: 'CizgiMax', headers: dzen.headers || { 'Referer': dzen.referer, 'Origin': 'https://dzen.ru' } };
-              var hs = dzen.heights || [];
-              if (hs.length < 2) {
-                // Seçilecek tek bir yükseklik var: tek giriş, kısıtlama yok
-                results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label, url: dzen.url, quality: dzen.quality || 'Auto' }, base));
-                return;
-              }
-              // Auto: özgün MPD (uyarlanabilir); sonra her gerçek yükseklik için ayrı seçim isteği
-              results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | Auto', url: dzen.url, quality: 'Auto' }, base));
-              hs.forEach(function(h) {
-                results.push(Object.assign({ title: '⌜ CİZGİMAX ⌟ | ' + label + ' | ' + h + 'p', url: dzen.url + QUALITY_FRAGMENT + h, quality: h + 'p' }, base));
-              });
-            });
-          }
-
-          return Promise.resolve();
+      // Hız: tercih edilen sunucu (Dzen etiketi öncelikli; asıl tür yönlendirme sonrası ana makineden doğrulanır)
+      // geçerli sonuç verir vermez DÖNER; Vidmoly vb. yalnızca öncekiler başarısızsa istenir.
+      var ordered = servers.filter(function(sv) { return /dzen/i.test(sv.label || ''); })
+        .concat(servers.filter(function(sv) { return !/dzen/i.test(sv.label || ''); }));
+      var chain = Promise.resolve([]);
+      ordered.forEach(function(server) {
+        chain = chain.then(function(found) {
+          if (found.length) return found;
+          return resolveServer(server, epUrl);
         });
       });
-
-      return chain.then(function() { return results; });
+      return chain;
     })
     .catch(function(e) {
       console.log('[CizgiMax] Sayfa hata: ' + (e.message || String(e)));

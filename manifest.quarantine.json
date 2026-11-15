@@ -124,7 +124,7 @@
       "id": "cizgimax-wekmed",
       "name": "CizgiMax (wekmed)",
       "description": "Türkçe çizgi film ve animasyon dizileri. cizgimax.online üzerinden 500+ içerikle full HD stream sağlar.",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
       "supportedTypes": [
         "tv"
