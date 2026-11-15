@@ -1,6 +1,6 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sinefil kaynak paketi: aynı siteyi sunan tekrarlar tek girişe indirildi (62 benzersiz kaynak); tümü kullanıcı seçimine açıktır (enabled: true). Erişilebilirlik ve oynatma garantisi değildir. Kaldırılan alternatifler manifest.alternates.json içindedir; eşleme CANONICAL.json.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
@@ -122,9 +122,9 @@
     },
     {
       "id": "cizgimax-wekmed",
-      "name": "CizgiMax",
-      "description": "Türkçe çizgi film ve animasyon dizileri. cizgimax.online üzerinden 500+ içerikle full HD stream sağlar.",
-      "version": "1.0.2",
+            "name": "CizgiMax",
+            "description": "CizgiMax.online üzerinden çizgi film ve anime bölümleri.",
+            "version": "1.0.3",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
       "supportedTypes": [
         "tv"
