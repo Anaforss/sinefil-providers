@@ -555,7 +555,9 @@ function resolveCloseLoadStreams(pageUrl) {
       var ifrMatch = html.match(/data-src="([^"]*video\/embed[^"]*)"/i) || html.match(/<iframe[^>]+src="([^"]*video\/embed[^"]*)"/i);
       if (!ifrMatch) return null;
       var embedUrl = ifrMatch[1];
+      embedUrl = embedUrl.replace(/&amp;/gi, "&").replace(/&#0*38;/g, "&").trim();
       if (embedUrl.startsWith("//")) embedUrl = "https:" + embedUrl;
+      else if (embedUrl.startsWith("/")) embedUrl = BASE_URL + embedUrl;
       var embedHost = "hdfilmcehennemi.mobi";
       try {
         embedHost = new URL(embedUrl).hostname;

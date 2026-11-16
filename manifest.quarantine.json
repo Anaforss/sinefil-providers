@@ -495,7 +495,7 @@
       "id": "hdfilmcehennemi",
       "name": "HDFilmCehennemi",
       "description": "DENEYSEL (kullanıcı isteğiyle eklendi, çalıştığı doğrulanmadı): HDFilmCehennemi film akışları. Site erişimi engellenebilir; akış gelmeyebilir.",
-      "version": "1.8.40",
+      "version": "1.8.41",
       "author": "falsisdev",
       "supportedTypes": [
         "movie",

@@ -44,7 +44,7 @@ class T(unittest.TestCase):
         self.assertEqual(len(full), 62)
         self.assertEqual(self.main[0]["version"], "1.0.5")
         for x in self.main: self.assertEqual(x, full[x["id"]])
-        self.assertEqual(self.main[3]["version"], "1.8.40"); self.assertIn("EXPERIMENTAL".lower(), self.main[3]["description"].lower().replace("deneysel","experimental"))
+        self.assertEqual(self.main[3]["version"], "1.8.41"); self.assertIn("EXPERIMENTAL".lower(), self.main[3]["description"].lower().replace("deneysel","experimental"))
         self.assertIn("movie", self.main[1]["supportedTypes"]); self.assertTrue({"tv","series"} <= set(self.main[2]["supportedTypes"]))
         self.assertEqual(J("manifest.json")["version"], J("manifest.all-sources.json")["version"])
         for x in self.main:

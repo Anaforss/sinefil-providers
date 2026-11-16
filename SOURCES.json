@@ -411,7 +411,7 @@
     "origin_id": "hdfilmcehennemi",
     "origin_version": "1.8.39",
     "originalSha256": "091ecf3e5e6c8faf28f7ff3d9475ced191309cf58f9d7deae070ea14ca9536f6",
-    "vendoredSha256": "354ea43ef48eb49f8fbb0035cf14c052137825f2d00da8d56ec711d7b88129df",
+    "vendoredSha256": "329d1f8d672bcbec712c4da47951b2f9046b54a5cca32bcebfec7ef541ed426c",
     "modified": true,
     "modifications": [
       "tmdb-key-removed",
