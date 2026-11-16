@@ -686,7 +686,26 @@ function getStreams(tmdbIdOrArgs, mediaType, seasonNum, episodeNum) {
       var slug = yield findMovieSlug(rawId);
       if (!slug) return [];
       var pageUrl = BASE_URL + "/" + slug + "/";
-      var resolved = yield resolveCloseLoadStreams(pageUrl);
+      var resolved = null;
+      // Sinefil: kullanıcı eylemiyle açılan yalıtılmış tarayıcı yeteneği (eski istemcilerde yok -> düz HTTP).
+      var browserStatus = "unsupported";
+      var browserUrl = null;
+      if (typeof __sinefil_resolve_browser_page === "function") {
+        try {
+          var br = JSON.parse(yield __sinefil_resolve_browser_page(pageUrl));
+          browserStatus = br && br.status ? String(br.status) : "nomedia";
+          browserUrl = br && br.url ? String(br.url) : null;
+        } catch (e) {
+          browserStatus = "unsupported";
+        }
+      }
+      if (browserStatus === "candidate" && browserUrl) {
+        resolved = { streamUrl: browserUrl, subtitles: [] };
+      } else if (browserStatus === "disabled" || browserStatus === "unsupported") {
+        resolved = yield resolveCloseLoadStreams(pageUrl);
+      } else {
+        return [];
+      }
       if (!resolved || !resolved.streamUrl) return [];
       var masterUrl = resolved.streamUrl;
       var playUrl = masterUrl.includes("#") ? masterUrl : masterUrl + "#.m3u8";

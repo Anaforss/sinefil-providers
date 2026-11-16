@@ -1,6 +1,6 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Sinefil tam kaynak kataloğu (62 benzersiz kaynak, hepsi enabled: true). Geçici olarak ana manifest.json yalnızca ÇizgiMax, FilmModu, DDiziBox ve deneysel HDFilmCehennemi içerir; tüm kaynakları geri getirmek için bu dosyanın içeriğini manifest.json yapın. Erişilebilirlik/oynatma garantisi değildir.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
@@ -518,7 +518,7 @@
       "id": "hdfilmcehennemi",
       "name": "HDFilmCehennemi",
       "description": "DENEYSEL (kullanıcı isteğiyle eklendi, çalıştığı doğrulanmadı): HDFilmCehennemi film akışları. Site erişimi engellenebilir; akış gelmeyebilir.",
-      "version": "1.8.41",
+      "version": "1.8.42",
       "author": "falsisdev",
       "supportedTypes": [
         "movie",
