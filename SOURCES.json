@@ -415,7 +415,8 @@
     "modified": true,
     "modifications": [
       "tmdb-key-removed",
-      "access-barrier-403-stop-slug-loop"
+      "access-barrier-403-stop-slug-loop",
+      "experimental-user-requested-activation-manifest-1.0.8"
     ],
     "spdx": "GPL-3.0",
     "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",

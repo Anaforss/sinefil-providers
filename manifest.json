@@ -1,7 +1,7 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.7",
-  "description": "Sinefil kaynak paketi (geçici): ÇizgiMax, FilmModu ve DDiziBox. Diğer 59 kaynak silinmedi; manifest.all-sources.json içinde saklıdır.",
+  "version": "1.0.8",
+  "description": "Sinefil kaynak paketi (geçici): ÇizgiMax, FilmModu, DDiziBox ve DENEYSEL HDFilmCehennemi (kullanıcı isteğiyle, çalıştığı doğrulanmadı). Diğer 58 kaynak silinmedi; manifest.all-sources.json içinde saklıdır.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
     {
@@ -125,6 +125,47 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hdfilmcehennemi",
+      "name": "HDFilmCehennemi",
+      "description": "DENEYSEL (kullanıcı isteğiyle eklendi, çalıştığı doğrulanmadı): HDFilmCehennemi film akışları. Site erişimi engellenebilir; akış gelmeyebilir.",
+      "version": "1.8.40",
+      "author": "falsisdev",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/anthology/hdfilmcehennemi.js",
+      "enabled": true,
+      "formats": [
+        "hls",
+        "m3u8"
+      ],
+      "logo": "https://raw.githubusercontent.com/falsisdev/anthology/main/assets/logo_1_transparent.png",
+      "contentLanguage": [
+        "tr",
+        "en"
+      ],
+      "catalogs": [
+        {
+          "type": "movie",
+          "id": "anthology_hdfilmcehennemi",
+          "name": "HDFilmCehennemi — Popüler Filmler",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": false
+            }
+          ]
+        }
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "stream"
+      ],
+      "supportsExternalPlayer": true
     }
   ]
 }
