@@ -1,44 +1,9 @@
 {
-  "manifestVersion": "1.0.2",
-  "before": 78,
-  "after": 62,
-  "removed": 16,
+  "manifestVersion": "1.0.11",
+  "before": 72,
+  "after": 59,
+  "removed": 13,
   "groups": [
-    {
-      "group": "filmmodu",
-      "keptId": "filmmodu",
-      "removedIds": [
-        "filmmodu-wekmed",
-        "filmmodu-mooncrown"
-      ],
-      "reason": "Anthology: geçmişte HLS doğrulanmış; diğer ikisi tanınmayan/doğrulanmamış (evidence: historical HLS validation)",
-      "keptNameBefore": "FilmModu",
-      "removedNames": [
-        "FilmModu (wekmed)",
-        "FilmModu (mooncrown)"
-      ],
-      "files": {
-        "filmmodu": "providers/anthology/filmmodu.js",
-        "filmmodu-wekmed": "providers/wekmed/filmmodu.js",
-        "filmmodu-mooncrown": "providers/mooncrown/filmmodu.js"
-      }
-    },
-    {
-      "group": "hdfilmcehennemi",
-      "keptId": "hdfilmcehennemi",
-      "removedIds": [
-        "hdfilmcehennemi-wekmed"
-      ],
-      "reason": "İkisi de engelli (kanıt yok); belirleyici kural: Anthology 1.8.39 sürekli bakımlı, uygulama uyumlu taban; daha iyi olduğu iddia edilmez",
-      "keptNameBefore": "HDFilmCehennemi",
-      "removedNames": [
-        "HDFilmCehennemi (wekmed)"
-      ],
-      "files": {
-        "hdfilmcehennemi": "providers/anthology/hdfilmcehennemi.js",
-        "hdfilmcehennemi-wekmed": "providers/wekmed/hdfilmcehennemi.js"
-      }
-    },
     {
       "group": "jetfilmizle",
       "keptId": "jetfilmizle-wekmed",

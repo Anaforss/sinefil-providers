@@ -1,23 +1,5 @@
 [
   {
-    "file": "providers/wekmed/filmmodu.js",
-    "origin_repo": "Wekmed/nuvio",
-    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
-    "origin_path": "providers/filmmodu.js",
-    "origin_id": "filmmodu",
-    "origin_version": "1.0.0",
-    "originalSha256": "b2d059252d34a79931bbc511772661e2f2dff407c28a24fd2915b2e69d72ad7e",
-    "vendoredSha256": "9ad5661e3c22299c058b34fa9a558d47df8b16231c0422b101d55f5407113cf5",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed"
-    ],
-    "spdx": "NONE-FOUND",
-    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
-    "permissionBasis": "user-reported-permission",
-    "permissionDate": "2026-11-15"
-  },
-  {
     "file": "providers/wekmed/filmmakinesi.js",
     "origin_repo": "Wekmed/nuvio",
     "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
@@ -26,24 +8,6 @@
     "origin_version": "1.0.1",
     "originalSha256": "27b7f4e92c56cf02350c5a209197d7ee4da0c43dfbbe89417f1a31af2fd8293b",
     "vendoredSha256": "4fef27e4c65c93f4f5c066641293959bcedcf74d1123b8deab0fe70ebb2235ec",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed"
-    ],
-    "spdx": "NONE-FOUND",
-    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
-    "permissionBasis": "user-reported-permission",
-    "permissionDate": "2026-11-15"
-  },
-  {
-    "file": "providers/wekmed/hdfilmcehennemi.js",
-    "origin_repo": "Wekmed/nuvio",
-    "origin_sha": "c48881cb0b6ce191af3eba4163f2f8016ae3531d",
-    "origin_path": "providers/hdfilmcehennemi.js",
-    "origin_id": "hdfilmcehennemi",
-    "origin_version": "1.0.0",
-    "originalSha256": "2c20a5854bff7c230b600b63ae3d26f78d3b5a1ec4a2f42c488e3e1305742f3e",
-    "vendoredSha256": "08d055547898277aadbd632bac422fd966d2ae4fe3647e081f68ce4d448ffb8c",
     "modified": true,
     "modifications": [
       "tmdb-key-removed"
@@ -386,44 +350,6 @@
     "permissionDate": null
   },
   {
-    "file": "providers/anthology/filmmodu.js",
-    "origin_repo": "falsisdev/anthology",
-    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
-    "origin_path": "providers/filmmodu.js",
-    "origin_id": "filmmodu",
-    "origin_version": "1.8.39",
-    "originalSha256": "3f17c938b92134808dd9fb3d11725508d6c95bccfda618785c8403df2a6a9edf",
-    "vendoredSha256": "0ffce586c57ddeda9ecd27207e9acef5ea8b02e47f0d9d5170d08662bc0c92e1",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed"
-    ],
-    "spdx": "GPL-3.0",
-    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
-    "permissionBasis": "published-licence",
-    "permissionDate": null
-  },
-  {
-    "file": "providers/anthology/hdfilmcehennemi.js",
-    "origin_repo": "falsisdev/anthology",
-    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
-    "origin_path": "providers/hdfilmcehennemi.js",
-    "origin_id": "hdfilmcehennemi",
-    "origin_version": "1.8.39",
-    "originalSha256": "091ecf3e5e6c8faf28f7ff3d9475ced191309cf58f9d7deae070ea14ca9536f6",
-    "vendoredSha256": "6777b7d084e8877589fa518eebc3a195cca4154d5635b5b0b867bb30da5fa4d2",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed",
-      "access-barrier-403-stop-slug-loop",
-      "experimental-user-requested-activation-manifest-1.0.8"
-    ],
-    "spdx": "GPL-3.0",
-    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
-    "permissionBasis": "published-licence",
-    "permissionDate": null
-  },
-  {
     "file": "providers/anthology/diziyou.js",
     "origin_repo": "falsisdev/anthology",
     "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
@@ -686,24 +612,6 @@
     "modifications": [
       "tmdb-key-removed",
       "client-key-removed"
-    ],
-    "spdx": "GPL-3.0",
-    "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
-    "permissionBasis": "published-licence",
-    "permissionDate": null
-  },
-  {
-    "file": "providers/anthology/ddizibox.js",
-    "origin_repo": "falsisdev/anthology",
-    "origin_sha": "7cefd7a0605921144e0d3819adec1d41b283491a",
-    "origin_path": "providers/ddizibox.js",
-    "origin_id": "ddizibox",
-    "origin_version": "1.8.39",
-    "originalSha256": "4207861f2c884646622dbb7316ec49ac76fa6bc70ad623d48da44dffa3fa3e8a",
-    "vendoredSha256": "4171c1dd9cb2a4a253c2687b537ea27bb7f79128a789138c448c7d5c489f9bf5",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed"
     ],
     "spdx": "GPL-3.0",
     "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
@@ -1330,24 +1238,6 @@
     "origin_version": "1.0.0",
     "originalSha256": "1b7d931eb11ab98db50b6c07271555817fd37cebcfceeb6c1bb1152be4f63cb9",
     "vendoredSha256": "f4dfde1204d5ac5dd8c232664a26ea2f4378a161f14eb8bb47508356357e9af6",
-    "modified": true,
-    "modifications": [
-      "tmdb-key-removed"
-    ],
-    "spdx": "NONE-FOUND",
-    "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
-    "permissionBasis": "user-reported-permission",
-    "permissionDate": "2026-11-15"
-  },
-  {
-    "file": "providers/mooncrown/filmmodu.js",
-    "origin_repo": "mooncrown04/nuviotr",
-    "origin_sha": "8337e4636079d32c97c60b65dd5a09878e60cd31",
-    "origin_path": "providers/filmmodu.js",
-    "origin_id": "filmmodu",
-    "origin_version": "1.0.0",
-    "originalSha256": "02bc8129b9b06cc3c8913b920854237d9bf50ddd94222ac2e2932ede0cc71e26",
-    "vendoredSha256": "89bc03a9e9179ef66ef6549a79193c8b3e1f20b49be87e479a7cfe602dee18ab",
     "modified": true,
     "modifications": [
       "tmdb-key-removed"

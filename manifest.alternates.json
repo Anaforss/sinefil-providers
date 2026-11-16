@@ -5,42 +5,6 @@
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
     {
-      "id": "filmmodu-wekmed",
-      "name": "FilmModu (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı full HD filmler. filmmodu.ws üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: Wekmed",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/wekmed/filmmodu.js",
-      "enabled": true,
-      "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
-      "id": "hdfilmcehennemi-wekmed",
-      "name": "HDFilmCehennemi (wekmed)",
-      "description": "Türkçe dublaj ve altyazılı full HD film ve diziler. hdfilmcehennemi üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "Wekmed",
-      "supportedTypes": [
-        "movie",
-        "tv"
-      ],
-      "filename": "providers/wekmed/hdfilmcehennemi.js",
-      "enabled": true,
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
-      "disabledPlatforms": []
-    },
-    {
       "id": "fullhdfilmizlesene-wekmed",
       "name": "FullHDFilmizlesene (wekmed)",
       "description": "Türkçe dublaj ve altyazılı full HD filmler. fullhdfilmizlesene.live üzerinden stream sağlar.",
@@ -277,24 +241,6 @@
         "tr"
       ],
       "limited": true,
-      "disabledPlatforms": []
-    },
-    {
-      "id": "filmmodu-mooncrown",
-      "name": "FilmModu (mooncrown)",
-      "description": "Türkçe dublaj ve altyazılı full HD filmler. filmmodu.ws üzerinden stream sağlar.",
-      "version": "1.0.0",
-      "author": "port: @keyiflerolsun / nuvio: sen",
-      "supportedTypes": [
-        "movie"
-      ],
-      "filename": "providers/mooncrown/filmmodu.js",
-      "enabled": true,
-      "logo": "https://filmmodu.rip/wp-content/uploads/2023/07/logo.png",
-      "contentLanguage": [
-        "tr"
-      ],
-      "limited": false,
       "disabledPlatforms": []
     },
     {
