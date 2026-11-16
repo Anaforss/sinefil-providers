@@ -566,11 +566,18 @@ function resolveCloseLoadStreams(pageUrl) {
       var streamUrl = null;
       var eHtml = "";
       for (var attempt = 0; attempt < 3 && !streamUrl; attempt++) {
-        var embedUa = attempt === 0 || attempt === 2 ? "Mozilla/5.0" : HEADERS["User-Agent"];
+        // Gözlem (2026-11-16, kullanıcı PC'si): embed uç noktası yalnızca bir tarayıcının iframe
+        // gezinmesinde gönderdiği başlık setiyle 200 döner (Accept text/html + Sec-Fetch-* + sayfa Referer).
+        // Aksi hâlde boş gövdeli 404 verir. Deneme 1: film sayfası Referer; deneme 2: site kökü Referer.
         var eRes = yield fetchWithTimeout(embedUrl, {
           headers: {
-            "User-Agent": embedUa,
-            "Referer": BASE_URL + "/"
+            "User-Agent": HEADERS["User-Agent"],
+            "Accept": HEADERS["Accept"],
+            "Accept-Language": HEADERS["Accept-Language"],
+            "Referer": attempt === 1 ? BASE_URL + "/" : pageUrl,
+            "Sec-Fetch-Dest": "iframe",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "cross-site"
           }
         }, 1e4);
         if (!eRes.ok) continue;
