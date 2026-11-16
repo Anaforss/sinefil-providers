@@ -485,6 +485,9 @@ function findMovieSlug(tmdbIdOrSlug) {
       if (!cand) continue;
       try {
         var res = yield fetchWithTimeout(BASE_URL + "/" + cand + "/", { headers: HEADERS }, 5e3);
+        if (res.status === 403 || res.status === 429 || res.status === 503) {
+          return null;
+        }
         if (res.status === 200) {
           var html = yield res.text();
           var imdbMatch = html.match(/https:\/\/(?:www\.)?imdb\.com\/title\/(tt\d+)/i);
@@ -546,6 +549,7 @@ function resolveCloseLoadStreams(pageUrl) {
   return __async(this, null, function* () {
     try {
       var res = yield fetchWithTimeout(pageUrl, { headers: HEADERS }, 1e4);
+      if (res && (res.status === 403 || res.status === 429 || res.status === 503)) return null;
       if (!res.ok) return null;
       var html = yield res.text();
       var ifrMatch = html.match(/data-src="([^"]*video\/embed[^"]*)"/i) || html.match(/<iframe[^>]+src="([^"]*video\/embed[^"]*)"/i);

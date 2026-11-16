@@ -411,10 +411,11 @@
     "origin_id": "hdfilmcehennemi",
     "origin_version": "1.8.39",
     "originalSha256": "091ecf3e5e6c8faf28f7ff3d9475ced191309cf58f9d7deae070ea14ca9536f6",
-    "vendoredSha256": "84ae7ee66bcc3f6a2813a20dcdeb8d772aea33b088c463f47a03f9937a2873af",
+    "vendoredSha256": "354ea43ef48eb49f8fbb0035cf14c052137825f2d00da8d56ec711d7b88129df",
     "modified": true,
     "modifications": [
-      "tmdb-key-removed"
+      "tmdb-key-removed",
+      "access-barrier-403-stop-slug-loop"
     ],
     "spdx": "GPL-3.0",
     "license_note": "LICENSE file is GPL-3.0 (unfilled template); package.json and README badge say MIT. Treated as GPL-3.0 (stricter, compatible with Sinefil GPL).",
