@@ -51,22 +51,56 @@ function normalizeStr(s) {
 // ── TMDB ─────────────────────────────────────────────────────
 function fetchTmdbInfo(tmdbId, mediaType) {
   var ep = (mediaType === 'movie') ? 'movie' : 'tv';
+  // translations: animede özgün ad Japonca olabilir (ナルト); site İngilizce/Türkçe adla arar.
   return fetch('https://api.themoviedb.org/3/' + ep + '/' + tmdbId
-    + '?api_key=' + TMDB_API_KEY + '&language=tr-TR')
+    + '?api_key=' + TMDB_API_KEY + '&language=tr-TR&append_to_response=translations')
     .then(function(r) { return r.json(); })
     .then(function(d) {
+      d = d || {};
+      var tr = d.title || d.name || '', orig = d.original_title || d.original_name || '', en = '';
+      var list = (d.translations && d.translations.translations) || [];
+      list.forEach(function(t) {
+        if (t.iso_639_1 !== 'en' || !t.data) return;
+        var n = t.data.name || t.data.title || '';
+        if (n && (!en || t.iso_3166_1 === 'US')) en = n;
+      });
+      var names = [];
+      [en, orig, tr].forEach(function(n) { if (n && names.indexOf(n) === -1) names.push(n); });
       return {
-        titleTr: d.title || d.name || '',
-        titleEn: d.original_title || d.original_name || '',
+        titleTr: tr,
+        titleEn: en || orig,
+        names: names,
         year: parseInt(String(d.first_air_date || d.release_date || '').slice(0, 4), 10) || 0
       };
     });
 }
 
+// Site arada 502/503 veriyor (arka uç düşüyor); kısa beklemelerle iki kez daha dene.
+function siteFetch(url, opts) {
+  var waits = [700, 1800];
+  function attempt(i) {
+    return fetch(url, opts).then(function(r) {
+      if (r && r.status >= 500 && i < waits.length) {
+        console.log('[CizgiMax] ' + r.status + ', yeniden deneniyor');
+        return delay(waits[i]).then(function() { return attempt(i + 1); });
+      }
+      return r;
+    }, function(e) {
+      if (i >= waits.length) throw e;
+      return delay(waits[i]).then(function() { return attempt(i + 1); });
+    });
+  }
+  return attempt(0);
+}
+
+function delay(ms) {
+  return new Promise(function(resolve) { setTimeout(resolve, ms); });
+}
+
 // ── Arama ─────────────────────────────────────────────────────
 // /api/search/suggest/?q= → {animes:[{name, url, kind}]}
 function searchSite(query) {
-  return fetch(MAIN_URL + '/api/search/suggest/?q=' + encodeURIComponent(query), {
+  return siteFetch(MAIN_URL + '/api/search/suggest/?q=' + encodeURIComponent(query), {
     headers: Object.assign({}, HEADERS, { 'Accept': 'application/json' })
   })
   .then(function(r) { return r.json(); })
@@ -91,18 +125,21 @@ function slugTitle(url) {
   return { base: m[1].replace(/-((?:19|20)\d{2})$/, '').replace(/-/g, ' '), year: y ? parseInt(y[1], 10) : 0 };
 }
 
-function nameScore(name, en, tr) {
+function nameScore(name, names) {
   var ni = normalizeStr(name);
   if (!ni) return 0;
-  if (ni === normalizeStr(en) || ni === normalizeStr(tr)) return 100;
-  // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
-  var pre = [en, tr].map(function(s) { return normalizeStr((s || '').split(':')[0]); });
-  return (pre[0] === ni || pre[1] === ni) ? 60 : 0;
+  var best = 0;
+  names.forEach(function(n) {
+    if (ni === normalizeStr(n)) best = 100;
+    // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
+    else if (!best && ni === normalizeStr((n || '').split(':')[0])) best = 60;
+  });
+  return best;
 }
 
-function scoreCandidate(r, en, tr, year) {
+function scoreCandidate(r, names, year) {
   var sp = splitYear(r.name), slug = slugTitle(r.url);
-  var sc = Math.max(nameScore(sp.base, en, tr), nameScore(slug.base, en, tr));
+  var sc = Math.max(nameScore(sp.base, names), nameScore(slug.base, names));
   if (!sc) return 0;
   var siteYear = sp.year || slug.year || (parseInt(r.year, 10) || 0);
   if (siteYear && year) {
@@ -112,13 +149,13 @@ function scoreCandidate(r, en, tr, year) {
   return sc;
 }
 
-function findBestMatch(results, en, tr, year) {
+function findBestMatch(results, names, year) {
   var best = null, bestScore = 0;
   [false, true].forEach(function(allowFilm) {
     if (best) return;
     results.forEach(function(r) {
       if ((r.kind === 'film') !== allowFilm) return;
-      var sc = scoreCandidate(r, en, tr, year);
+      var sc = scoreCandidate(r, names, year);
       if (sc > bestScore) { bestScore = sc; best = r; }
     });
   });
@@ -171,7 +208,7 @@ function extractVidmoly(embedUrl, html) {
 function extractDzen(oynatUrl, epUrl) {
   var fullUrl = oynatUrl.startsWith('http') ? oynatUrl : MAIN_URL + oynatUrl;
 
-  return fetch(fullUrl, {
+  return siteFetch(fullUrl, {
     headers: Object.assign({}, HEADERS, { 'Referer': epUrl })
   })
   .then(function(r) {
@@ -308,7 +345,7 @@ function fetchEpisodeStreams(epUrl) {
   // Sitenin Varnish önbelleği bölüm sayfasını saatlerce eski tutabiliyor; içindeki /oynat/ jetonlarının
   // süresi o zaman dolmuş olur (403 "Oynatma suresi doldu"). Benzersiz sorgu önbelleği atlar.
   var freshUrl = epUrl + (epUrl.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
-  return fetch(freshUrl, { headers: HEADERS })
+  return siteFetch(freshUrl, { headers: HEADERS })
     .then(function(r) { return r.text(); })
     .then(function(html) {
       var servers = parseServers(html);
@@ -344,14 +381,14 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
 
   return fetchTmdbInfo(tmdbId, mediaType)
     .then(function(info) {
-      console.log('[CizgiMax] TMDB: ' + info.titleEn + ' / ' + info.titleTr);
-      if (!info.titleEn && !info.titleTr) return [];
+      console.log('[CizgiMax] TMDB: ' + info.names.join(' / '));
+      if (!info.names.length) return [];
 
-      // Sırayla: İngilizce ad, Türkçe ad, sonra noktalamasız hâlleri (site araması
+      // Sırayla: İngilizce ad, özgün ad, Türkçe ad, sonra noktalamasız hâlleri (site araması
       // "Ben 10: Alien Force" için boş döner, "Ben 10 Alien Force" için bulur). İlk eşleşmede durur.
       var queries = [];
-      [info.titleEn, info.titleTr].forEach(function(t) { if (t) queries.push(t); });
-      [info.titleEn, info.titleTr].forEach(function(t) {
+      info.names.forEach(function(t) { queries.push(t); });
+      info.names.forEach(function(t) {
         var plain = (t || '').replace(/[:!?.,;'’"()&]+/g, ' ').replace(/\s+/g, ' ').trim();
         if (plain) queries.push(plain);
       });
@@ -362,7 +399,7 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
           if (found) return found;
           return searchSite(q).then(function(results) {
             console.log('[CizgiMax] Arama (' + q + '): ' + results.length + ' sonuc');
-            return findBestMatch(results, info.titleEn, info.titleTr, info.year);
+            return findBestMatch(results, info.names, info.year);
           });
         });
       });

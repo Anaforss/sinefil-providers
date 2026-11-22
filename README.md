@@ -1,6 +1,6 @@
 # Sinefil Sources
 
-Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.12.
+Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.13.
 
 ## İçe aktarma
 Sinefil > Eklentiler > Sağlayıcı deposu ekle alanına şu adresi girin:
@@ -23,6 +23,10 @@ Tercih edilen Dzen sunucusu (etiket önceliği; asıl tür yönlendirme sonrası
 
 ## Kaynak ve izinler
 Özgün depo/SHA ve vendor SHA-256 değerleri `SOURCES.json` içindedir; lisanslar `LICENSES/`, izin kaydı `PERMISSIONS.md`. Kod ilgili özgün sahiplerine aittir; bu depo genel bir lisans vermez.
+
+## ÇizgiMax dayanıklılık ve anime adları (1.0.7)
+- Site arada arka uç hatası (502/503) veriyor; eklenti artık kısa beklemelerle iki kez daha dener, geçici kesintide "kaynak yok" demez.
+- Animelerde TMDB özgün adı Japonca olabiliyor (ör. ナルト); Türkçe çeviri yoksa site Japonca adla aranıp bulunamıyordu. Artık TMDB çevirilerindeki İngilizce ad da aranır.
 
 ## ÇizgiMax güncel sayfa ve eşleşme (1.0.6)
 - Sitenin önbelleği bölüm sayfasını saatlerce eski tutabiliyordu; içindeki oynatma jetonlarının süresi dolmuş geldiği için bazı dizilerde (ör. Ben 10) hiç kaynak çıkmıyordu. Bölüm sayfası artık önbelleği atlayarak istenir.

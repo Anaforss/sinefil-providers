@@ -133,7 +133,7 @@
     "origin_id": "cizgimax",
     "origin_version": "1.0.0",
     "originalSha256": "7c022fee8781cf9dabbbd744aebc72694e0389b9a83ddc07798373ad2661f067",
-    "vendoredSha256": "8e9bd641df21dc376ff9fb16bc3718de4d7bc86009f7560914c7fa81f92ccc0c",
+    "vendoredSha256": "7f825ce2d1dfb48dca5efa45b27120745ec64a5327733b978fd04ac116bda17a",
     "modified": true,
     "modifications": [
       "tmdb-key-removed",
@@ -145,7 +145,9 @@
       "cizgimax-dzen-first-return",
       "cizgimax-fresh-episode-page",
       "cizgimax-slug-and-site-year-match",
-      "cizgimax-punctuation-free-search"
+      "cizgimax-punctuation-free-search",
+      "cizgimax-tmdb-english-name",
+      "cizgimax-retry-on-5xx"
     ],
     "spdx": "NONE-FOUND",
     "license_note": "user-reported owner permission (2026-11-15); no upstream licence file",
