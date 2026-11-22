@@ -1,6 +1,6 @@
 # Sinefil Sources
 
-Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.11.
+Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.12.
 
 ## İçe aktarma
 Sinefil > Eklentiler > Sağlayıcı deposu ekle alanına şu adresi girin:
@@ -23,6 +23,12 @@ Tercih edilen Dzen sunucusu (etiket önceliği; asıl tür yönlendirme sonrası
 
 ## Kaynak ve izinler
 Özgün depo/SHA ve vendor SHA-256 değerleri `SOURCES.json` içindedir; lisanslar `LICENSES/`, izin kaydı `PERMISSIONS.md`. Kod ilgili özgün sahiplerine aittir; bu depo genel bir lisans vermez.
+
+## ÇizgiMax güncel sayfa ve eşleşme (1.0.6)
+- Sitenin önbelleği bölüm sayfasını saatlerce eski tutabiliyordu; içindeki oynatma jetonlarının süresi dolmuş geldiği için bazı dizilerde (ör. Ben 10) hiç kaynak çıkmıyordu. Bölüm sayfası artık önbelleği atlayarak istenir.
+- Site önerileri Türkçe ad, ayrı yıl ve İngilizce slug taşıyor: eşleşme ad ya da slug ile yapılır, bilinen yıl TMDB yılıyla ±1 uyumlu olmalı (Ben 10 2016 artık 2005 dizisine değil kendi sayfasına gider).
+- Site araması iki nokta vb. içeren adlarda boş dönebiliyor ("Ben 10: Alien Force"); noktalamasız sorgu da denenir.
+- Bilinen, düzeltilmeyen: bazı bölümler yalnız Google Drive ya da telif engelli Sibnet sunucusu sunuyor (ör. SüngerBob 1x1, Naruto 1x1); bunlarda kaynak çıkmaz.
 
 ## Kaldırılanlar (1.0.11)
 FilmModu, DDiziBox ve HDFilmCehennemi kullanıcı isteğiyle depodan kaldırıldı (git geçmişinde durur). Daha önce kurulmuş kopyalar kullanıcının cihazında kalabilir; uygulamadan elle silinebilir.

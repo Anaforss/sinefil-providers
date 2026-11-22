@@ -81,19 +81,32 @@ function splitYear(name) {
   return { base: (name || '').replace(/\(\d{4}\)\s*$/, ''), year: m ? parseInt(m[1], 10) : 0 };
 }
 
-function scoreCandidate(r, en, tr, year) {
-  var sp = splitYear(r.name), ni = normalizeStr(sp.base), sc = 0;
+// Sitenin önerileri artık çoğunlukla Türkçe ad taşır ("Sürekli Dizi"), ayrıca ayrı bir `year`
+// alanı ve İngilizce slug verir (/diziler/ben-10-2016-izle/ → "Ben 10 Reboot", 2016).
+// Ad ya da slug (sondaki yıl atılarak) TMDB adıyla eşleşmeli; bilinen yıl TMDB yılıyla +-1 uyumlu olmalı.
+function slugTitle(url) {
+  var m = /\/diziler\/(.+?)-izle\/?/.exec(url || '') || /\/dizi\/([^\/?#]+)/.exec(url || '');
+  if (!m) return { base: '', year: 0 };
+  var y = /-((?:19|20)\d{2})$/.exec(m[1]);
+  return { base: m[1].replace(/-((?:19|20)\d{2})$/, '').replace(/-/g, ' '), year: y ? parseInt(y[1], 10) : 0 };
+}
+
+function nameScore(name, en, tr) {
+  var ni = normalizeStr(name);
   if (!ni) return 0;
-  var exact = (ni === normalizeStr(en) || ni === normalizeStr(tr));
-  if (exact) sc = 100;
-  else {
-    // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
-    var pre = [en, tr].map(function(s) { return normalizeStr((s || '').split(':')[0]); });
-    if (pre[0] === ni || pre[1] === ni) sc = 60;
-  }
+  if (ni === normalizeStr(en) || ni === normalizeStr(tr)) return 100;
+  // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
+  var pre = [en, tr].map(function(s) { return normalizeStr((s || '').split(':')[0]); });
+  return (pre[0] === ni || pre[1] === ni) ? 60 : 0;
+}
+
+function scoreCandidate(r, en, tr, year) {
+  var sp = splitYear(r.name), slug = slugTitle(r.url);
+  var sc = Math.max(nameScore(sp.base, en, tr), nameScore(slug.base, en, tr));
   if (!sc) return 0;
-  if (sp.year && year) {
-    if (Math.abs(sp.year - year) > 1) return 0;
+  var siteYear = sp.year || slug.year || (parseInt(r.year, 10) || 0);
+  if (siteYear && year) {
+    if (Math.abs(siteYear - year) > 1) return 0;
     sc += 10;
   }
   return sc;
@@ -292,7 +305,10 @@ function resolveServer(server, epUrl) {
 
 // ── Bölüm stream'lerini çıkar ────────────────────────────────
 function fetchEpisodeStreams(epUrl) {
-  return fetch(epUrl, { headers: HEADERS })
+  // Sitenin Varnish önbelleği bölüm sayfasını saatlerce eski tutabiliyor; içindeki /oynat/ jetonlarının
+  // süresi o zaman dolmuş olur (403 "Oynatma suresi doldu"). Benzersiz sorgu önbelleği atlar.
+  var freshUrl = epUrl + (epUrl.indexOf('?') === -1 ? '?' : '&') + '_=' + Date.now();
+  return fetch(freshUrl, { headers: HEADERS })
     .then(function(r) { return r.text(); })
     .then(function(html) {
       var servers = parseServers(html);
@@ -331,17 +347,26 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
       console.log('[CizgiMax] TMDB: ' + info.titleEn + ' / ' + info.titleTr);
       if (!info.titleEn && !info.titleTr) return [];
 
-      return searchSite(info.titleEn || info.titleTr)
-        .then(function(results) {
-          console.log('[CizgiMax] Arama: ' + results.length + ' sonuc');
-          var best = findBestMatch(results, info.titleEn, info.titleTr, info.year);
-          if (!best && info.titleTr && info.titleTr !== info.titleEn) {
-            return searchSite(info.titleTr).then(function(r2) {
-              return findBestMatch(r2, info.titleEn, info.titleTr, info.year);
-            });
-          }
-          return best;
-        })
+      // Sırayla: İngilizce ad, Türkçe ad, sonra noktalamasız hâlleri (site araması
+      // "Ben 10: Alien Force" için boş döner, "Ben 10 Alien Force" için bulur). İlk eşleşmede durur.
+      var queries = [];
+      [info.titleEn, info.titleTr].forEach(function(t) { if (t) queries.push(t); });
+      [info.titleEn, info.titleTr].forEach(function(t) {
+        var plain = (t || '').replace(/[:!?.,;'’"()&]+/g, ' ').replace(/\s+/g, ' ').trim();
+        if (plain) queries.push(plain);
+      });
+      queries = queries.filter(function(q, i) { return queries.indexOf(q) === i; });
+      var search = Promise.resolve(null);
+      queries.forEach(function(q) {
+        search = search.then(function(found) {
+          if (found) return found;
+          return searchSite(q).then(function(results) {
+            console.log('[CizgiMax] Arama (' + q + '): ' + results.length + ' sonuc');
+            return findBestMatch(results, info.titleEn, info.titleTr, info.year);
+          });
+        });
+      });
+      return search
         .then(function(best) {
           if (!best) {
             console.log('[CizgiMax] Bulunamadi: ' + (info.titleEn || info.titleTr));
