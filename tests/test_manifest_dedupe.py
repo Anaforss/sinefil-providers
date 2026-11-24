@@ -42,7 +42,7 @@ class T(unittest.TestCase):
         self.assertTrue(all(x["enabled"] is True for x in self.main))
         full = {x["id"]: x for x in self.s}
         self.assertEqual(len(full), 59)
-        self.assertEqual(self.main[0]["version"], "1.0.7")
+        self.assertEqual(self.main[0]["version"], "1.0.8")
         for x in self.main: self.assertEqual(x, full[x["id"]])
         self.assertEqual(J("manifest.json")["version"], J("manifest.all-sources.json")["version"])
         for x in self.main:

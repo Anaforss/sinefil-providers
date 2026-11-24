@@ -66,10 +66,16 @@ function fetchTmdbInfo(tmdbId, mediaType) {
       });
       var names = [];
       [en, orig, tr].forEach(function(n) { if (n && names.indexOf(n) === -1) names.push(n); });
+      // Normal sezonların bölüm sayıları: site bölümleri tek sezonda düz sırayla tutuyorsa mutlak sıraya çevirmek için
+      var seasons = {};
+      (d.seasons || []).forEach(function(s) {
+        if (s && s.season_number > 0) seasons[s.season_number] = s.episode_count || 0;
+      });
       return {
         titleTr: tr,
         titleEn: en || orig,
         names: names,
+        seasons: seasons,
         year: parseInt(String(d.first_air_date || d.release_date || '').slice(0, 4), 10) || 0
       };
     });
@@ -98,8 +104,51 @@ function delay(ms) {
 }
 
 // ── Arama ─────────────────────────────────────────────────────
-// /api/search/suggest/?q= → {animes:[{name, url, kind}]}
+// Tam arama sayfası /ara/?q= : her kartta Türkçe ad, İngilizce/özgün "alternatif ad", yıl ve tür var.
+// Hızlı öneri API'si (/api/search/suggest/) en fazla 5 sonuç ve yalnızca Türkçe ad döndürür;
+// TMDB'nin Türkçe adı sitenin adından farklıysa ("Aslan Koruyucular" / "The Lion Guard") eşleşme kaçıyordu.
+function decodeHtml(s) {
+  return String(s || '')
+    .replace(/&#0*39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, function(_, n) { return String.fromCharCode(parseInt(n, 10)); })
+    .replace(/&amp;/g, '&');
+}
+
+function parseSearchPage(html) {
+  var out = [];
+  var parts = String(html || '').split('<div class="film-item"');
+  for (var i = 1; i < parts.length; i++) {
+    var blk = parts[i];
+    var url = regexFirst(blk, 'href="(/diziler/[^"]+)"');
+    if (!url) continue;
+    var alt = regexFirst(blk, 'class="film-name"[^>]*data-alt-title="([^"]*)"')
+           || regexFirst(blk, 'data-alt-title="([^"]*)"');
+    var kind = regexFirst(blk, 'corner-tag corner-([a-z-]+)');
+    out.push({
+      name: decodeHtml(regexFirst(blk, 'data-anime-name="([^"]*)"') || ''),
+      alt: decodeHtml(alt || ''),
+      url: url,
+      kind: kind || '',
+      year: parseInt(regexFirst(blk, 'Yayın Yılı:</span>\\s*(\\d{4})') || '', 10) || 0
+    });
+  }
+  return out;
+}
+
 function searchSite(query) {
+  return siteFetch(MAIN_URL + '/ara/?q=' + encodeURIComponent(query), { headers: HEADERS })
+    .then(function(r) { return r.text(); })
+    .then(function(html) {
+      var results = parseSearchPage(html);
+      // Gerçek ama boş sonuç sayfası ("... için 0 sonuç"): öneri API'si de aynı aramayı yapar, ikinci istek boşuna
+      if (results.length || /listing-head-title/.test(html)) return results;
+      return searchSuggest(query);
+    })
+    .catch(function() { return searchSuggest(query); });
+}
+
+// Yedek: /api/search/suggest/?q= → {animes:[{name, url, kind, year}]}
+function searchSuggest(query) {
   return siteFetch(MAIN_URL + '/api/search/suggest/?q=' + encodeURIComponent(query), {
     headers: Object.assign({}, HEADERS, { 'Accept': 'application/json' })
   })
@@ -125,12 +174,15 @@ function slugTitle(url) {
   return { base: m[1].replace(/-((?:19|20)\d{2})$/, '').replace(/-/g, ' '), year: y ? parseInt(y[1], 10) : 0 };
 }
 
+// Baştaki İngilizce tanımlık yok sayılır: TMDB "The Grimm Variations" ~ site "Grimm Variations"
+function stripArticle(s) { return s.replace(/^(the|a|an) /, ''); }
+
 function nameScore(name, names) {
   var ni = normalizeStr(name);
   if (!ni) return 0;
   var best = 0;
   names.forEach(function(n) {
-    if (ni === normalizeStr(n)) best = 100;
+    if (ni === normalizeStr(n) || stripArticle(ni) === stripArticle(normalizeStr(n))) best = 100;
     // "Ninjago" ~ "Ninjago: Masters of Spinjitzu": yalnızca ':' öncesi tam eşleşme
     else if (!best && ni === normalizeStr((n || '').split(':')[0])) best = 60;
   });
@@ -138,10 +190,10 @@ function nameScore(name, names) {
 }
 
 function scoreCandidate(r, names, year) {
-  var sp = splitYear(r.name), slug = slugTitle(r.url);
-  var sc = Math.max(nameScore(sp.base, names), nameScore(slug.base, names));
+  var sp = splitYear(r.name), alt = splitYear(r.alt), slug = slugTitle(r.url);
+  var sc = Math.max(nameScore(sp.base, names), nameScore(alt.base, names), nameScore(slug.base, names));
   if (!sc) return 0;
-  var siteYear = sp.year || slug.year || (parseInt(r.year, 10) || 0);
+  var siteYear = sp.year || alt.year || slug.year || (parseInt(r.year, 10) || 0);
   if (siteYear && year) {
     if (Math.abs(siteYear - year) > 1) return 0;
     sc += 10;
@@ -170,6 +222,64 @@ function buildEpisodeUrl(diziUrl, season, episode) {
   if (!m) return null;
   var slug = m[1];
   return MAIN_URL + '/' + slug + '-' + season + '-sezon-' + episode + '-bolum-izle/';
+}
+
+// ── Dizi sayfasındaki bölüm ızgarası ─────────────────────────
+// Bölüm adresleri tek kalıba uymuyor (-1-sezon-5-bolum-izle/, -1-s1e5/, -sezon-1-bolum-5/, farklı slug...).
+// Dizi sayfası her sezonu <div ... data-season-pane="S"> içinde, bölüm numarasını ep-num-label'da verir.
+// Dönüş: [{season, episode, url}] sayfadaki sırayla.
+function parseEpisodeGrid(html) {
+  var out = [];
+  var parts = String(html || '').split('data-season-pane="');
+  for (var i = 1; i < parts.length; i++) {
+    var season = parseInt(parts[i], 10);
+    if (!season && season !== 0) continue;
+    var re = /<a\s+href="([^"]+)"\s+class="ep-num-btn"[\s\S]*?<span class="ep-num-label">\s*([^<]*?)\s*<\/span>/g, m;
+    while ((m = re.exec(parts[i])) !== null) {
+      out.push({ season: season, episode: /^\d+$/.test(m[2]) ? parseInt(m[2], 10) : 0, url: m[1] });
+    }
+  }
+  return out;
+}
+
+// TMDB (sezon, bölüm) → sitedeki bölüm adresi. Önce birebir sezon/bölüm; site bölümleri tek sezonda
+// düz numarayla tutuyorsa (TMDB 3 sezon, site 1 sezon 1-78) TMDB sezon uzunluklarından mutlak sıra hesaplanır.
+function pickEpisode(grid, season, episode, tmdbSeasons) {
+  var i;
+  for (i = 0; i < grid.length; i++) {
+    if (grid[i].season === season && grid[i].episode === episode) return grid[i].url;
+  }
+  var siteSeasons = {};
+  grid.forEach(function(g) { if (g.season > 0) siteSeasons[g.season] = true; });
+  var siteSeasonList = Object.keys(siteSeasons);
+  if (season > 1 && siteSeasonList.length === 1 && tmdbSeasons) {
+    var abs = episode;
+    for (var s = 1; s < season; s++) {
+      if (!tmdbSeasons[s]) return null; // eksik sezon bilgisi: tahmin etme
+      abs += tmdbSeasons[s];
+    }
+    var only = parseInt(siteSeasonList[0], 10);
+    for (i = 0; i < grid.length; i++) {
+      if (grid[i].season === only && grid[i].episode === abs) return grid[i].url;
+    }
+  }
+  return null;
+}
+
+function resolveEpisodeUrl(diziUrl, season, episode, tmdbSeasons) {
+  return siteFetch(diziUrl, { headers: HEADERS })
+    .then(function(r) { return r.text(); })
+    .then(function(html) {
+      var grid = parseEpisodeGrid(html);
+      console.log('[CizgiMax] Dizi sayfasi: ' + grid.length + ' bolum');
+      if (!grid.length) return buildEpisodeUrl(diziUrl, season, episode);
+      var u = pickEpisode(grid, season, episode, tmdbSeasons);
+      if (u) return u.indexOf('http') === 0 ? u : MAIN_URL + u;
+      // Uygulama yanıtı 1 MB'ta keser; ~550+ bölümlü dizide sayfa sonu (son bölümler) gelmez. O zaman tahmin et.
+      if (!/<\/html>/i.test(html)) return buildEpisodeUrl(diziUrl, season, episode);
+      return null;
+    })
+    .catch(function() { return buildEpisodeUrl(diziUrl, season, episode); });
 }
 
 // ── servers JSON parse ────────────────────────────────────────
@@ -375,6 +485,27 @@ function fetchEpisodeStreams(epUrl) {
     });
 }
 
+// Site araması adın bitişik bir parçasını arar ve noktalamada boş döner (2026-11-24 canlı):
+// "Ben 10: Alien Force" 0, "Ben 10 Alien Force" 1; "Don't Hug Me I'm Scared" 0, "Dont Hug Me Im Scared" 1;
+// "Oddbods (Shorts)" 0, "Oddbods" 1; "Austin & Ally" 0, sitedeki ad "Austin Ve Ally";
+// "Rubble & Crew" / "Voltron 84" yalnız ilk kelimeyle bulunur. Eşleşme yine ad/alternatif ad/slug ile doğrulanır.
+// Sırayla: adlar (İngilizce, özgün, Türkçe), temizlenmiş hâlleri, "&"→"ve", son çare ilk anlamlı kelime.
+function searchQueries(names) {
+  var q = [];
+  function add(s) { s = (s || '').replace(/\s+/g, ' ').trim(); if (s && q.indexOf(s) === -1) q.push(s); }
+  function clean(t, amp) {
+    return (t || '').replace(/\([^)]*\)/g, ' ').replace(/['’`]/g, '')
+      .replace(/\s*&\s*/g, amp).replace(/[:!?.,;"&\-–]+/g, ' ');
+  }
+  names.forEach(add);
+  names.forEach(function(t) { add(clean(t, ' ')); });
+  names.forEach(function(t) { if (/&/.test(t)) add(clean(t, ' ve ')); });
+  var words = clean(names[0], ' ').split(/\s+/).filter(function(w) { return w; });
+  if (words.length > 1 && /^(the|a|an)$/i.test(words[0])) words.shift();
+  if (words.length > 1 && words[0].length >= 4) add(words[0]);
+  return q;
+}
+
 // ── Ana fonksiyon ─────────────────────────────────────────────
 function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
   console.log('[CizgiMax] Baslatiliyor: ' + tmdbId + ' ' + mediaType);
@@ -384,15 +515,7 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
       console.log('[CizgiMax] TMDB: ' + info.names.join(' / '));
       if (!info.names.length) return [];
 
-      // Sırayla: İngilizce ad, özgün ad, Türkçe ad, sonra noktalamasız hâlleri (site araması
-      // "Ben 10: Alien Force" için boş döner, "Ben 10 Alien Force" için bulur). İlk eşleşmede durur.
-      var queries = [];
-      info.names.forEach(function(t) { queries.push(t); });
-      info.names.forEach(function(t) {
-        var plain = (t || '').replace(/[:!?.,;'’"()&]+/g, ' ').replace(/\s+/g, ' ').trim();
-        if (plain) queries.push(plain);
-      });
-      queries = queries.filter(function(q, i) { return queries.indexOf(q) === i; });
+      var queries = searchQueries(info.names);
       var search = Promise.resolve(null);
       queries.forEach(function(q) {
         search = search.then(function(found) {
@@ -415,15 +538,14 @@ function getStreams(tmdbId, mediaType, seasonNum, episodeNum) {
           var eNum = parseInt(episodeNum) || 1;
 
           var diziUrl = best.url.startsWith('http') ? best.url : MAIN_URL + best.url;
-          var epUrl   = buildEpisodeUrl(diziUrl, sNum, eNum);
-
-          if (!epUrl) {
-            console.log('[CizgiMax] Bolum URL olusturulamadi: ' + diziUrl);
-            return [];
-          }
-
-          console.log('[CizgiMax] Bolum URL: ' + epUrl);
-          return fetchEpisodeStreams(epUrl);
+          return resolveEpisodeUrl(diziUrl, sNum, eNum, info.seasons).then(function(epUrl) {
+            if (!epUrl) {
+              console.log('[CizgiMax] Bolum sitede yok: S' + sNum + 'E' + eNum + ' ' + diziUrl);
+              return [];
+            }
+            console.log('[CizgiMax] Bolum URL: ' + epUrl);
+            return fetchEpisodeStreams(epUrl);
+          });
         });
     })
     .catch(function(err) {

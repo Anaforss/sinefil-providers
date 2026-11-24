@@ -3,14 +3,14 @@
 import hashlib, json, os, re, subprocess, unittest
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NAMES = re.compile(r"hdfilmcehennemi|filmmodu|ddizibox", re.I)
-CIZGI_SHA = "7f825ce2d1dfb48dca5efa45b27120745ec64a5327733b978fd04ac116bda17a"
+CIZGI_SHA = "ac8ce12d81bf3cab66bf25a5df97054846909a962fdec6423e1f9fd69caf135c"
 def J(n):
     with open(os.path.join(R, n), encoding="utf-8") as f: return json.load(f)
 class T(unittest.TestCase):
     def test_main_manifest_only_cizgimax(self):
         s = J("manifest.json")["scrapers"]
         self.assertEqual([x["id"] for x in s], ["cizgimax-wekmed"])
-        self.assertIs(s[0]["enabled"], True); self.assertEqual(s[0]["version"], "1.0.7")
+        self.assertIs(s[0]["enabled"], True); self.assertEqual(s[0]["version"], "1.0.8")
     def test_cizgimax_bytes_unchanged(self):
         with open(os.path.join(R, "providers/wekmed/cizgimax.js"), "rb") as f:
             self.assertEqual(hashlib.sha256(f.read()).hexdigest(), CIZGI_SHA)

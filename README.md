@@ -1,6 +1,6 @@
 # Sinefil Sources
 
-Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.13.
+Sinefil için sağlayıcı (kaynak) paketi, sürüm 1.0.14.
 
 ## İçe aktarma
 Sinefil > Eklentiler > Sağlayıcı deposu ekle alanına şu adresi girin:
@@ -23,6 +23,12 @@ Tercih edilen Dzen sunucusu (etiket önceliği; asıl tür yönlendirme sonrası
 
 ## Kaynak ve izinler
 Özgün depo/SHA ve vendor SHA-256 değerleri `SOURCES.json` içindedir; lisanslar `LICENSES/`, izin kaydı `PERMISSIONS.md`. Kod ilgili özgün sahiplerine aittir; bu depo genel bir lisans vermez.
+
+## ÇizgiMax çizgi film kataloğu (1.0.8)
+- Arama artık sitenin tam arama sayfasından yapılır. Hızlı öneri API'si en fazla 5 sonuç ve yalnız Türkçe ad veriyordu; TMDB'nin Türkçe adı sitenin adından farklıysa ("Aslan Koruyucular" / "The Lion Guard") dizi bulunamıyordu. Tam arama sayfasındaki İngilizce/özgün ad ve yıl da karşılaştırılır.
+- Bölüm adresi tahmin edilmez; dizi sayfasındaki sezon ızgarasından okunur. Sitede bölümlerin yaklaşık dörtte biri `-1-sezon-5-bolum-izle/` kalıbına uymuyordu (`-1-s1e5/`, `-sezon-1-bolum-5/`, farklı slug) ve bu dizilerde hiç kaynak çıkmıyordu.
+- Site bütün bölümleri tek sezonda düz numarayla tutuyorsa TMDB'nin sezon uzunluklarından mutlak bölüm hesaplanır. Sitede olmayan bir bölüm için başka bölüm açılmaz.
+- Site sık istekte 429 veriyor (birkaç dakikalık bekleme); toplu tarama yapılmamalı.
 
 ## ÇizgiMax dayanıklılık ve anime adları (1.0.7)
 - Site arada arka uç hatası (502/503) veriyor; eklenti artık kısa beklemelerle iki kez daha dener, geçici kesintide "kaynak yok" demez.

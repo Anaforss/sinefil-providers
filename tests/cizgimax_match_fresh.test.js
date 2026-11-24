@@ -19,15 +19,25 @@ const SUGGEST = {
   'Attack on Titan': [{ name: 'Attack on Titan', year: 2013, kind: 'anime', url: '/diziler/attack-on-titan-izle/' }],
   'Regular Show': [{ name: 'Sürekli Dizi', year: 2010, kind: 'cizgi-film', url: '/diziler/regular-show-izle/' }]
 };
+// 1.0.8'den beri arama tam arama sayfasından (/ara/?q=), bölüm adresi dizi sayfasındaki sezon ızgarasından gelir;
+// sahte site ikisini de yukarıdaki veriden, canlı sitenin 2026-11-24 kart/ızgara biçiminde üretir.
+const searchPage = (list) => '<span class="listing-head-title">' + list.length + ' sonuç</span><div class="film-list">' + list.map(x =>
+  '<div class="film-item" data-anime-id="1" data-anime-name="' + x.name + '"><div class="inner"><a href="' + x.url + '" class="poster">' +
+  '<span class="corner-tag corner-' + x.kind + '">X</span></a><a href="' + x.url + '" class="film-name" data-alt-title="">' + x.name + '</a></div>' +
+  '<ul class="phc-meta"><li><span>Yayın Yılı:</span> ' + x.year + '</li></ul></div>').join('') + '</div>';
+const seriesPage = (slug) => '<div class="ep-grid-numbers active" data-season-pane="1" data-range-pane="1-100">' +
+  '<a href="/' + slug + '-1-sezon-1-bolum-izle/" class="ep-num-btn" data-ep-id="1" title="x"> <span class="ep-num-label">1</span></a></div>';
 async function run(tmdb, flaky) {
   const calls = []; let fails = flaky || 0;
   const resp = (url, body) => ({ ok: true, status: 200, url, text: () => Promise.resolve(body), json: () => Promise.resolve(body) });
   const f = async (u) => {
     calls.push(u);
     if (u.indexOf('api.themoviedb.org') !== -1) return resp(u, tmdb);
-    if (fails > 0 && u.indexOf('/api/search/') !== -1) { fails--; return { ok: false, status: 503, url: u, text: () => Promise.resolve('503'), json: () => Promise.reject(new Error('html')) }; }
-    const m = /\/api\/search\/suggest\/\?q=(.*)$/.exec(u);
-    if (m) return resp(u, { animes: SUGGEST[decodeURIComponent(m[1])] || [] });
+    if (fails > 0 && u.indexOf('/ara/') !== -1) { fails--; return { ok: false, status: 503, url: u, text: () => Promise.resolve('503'), json: () => Promise.reject(new Error('html')) }; }
+    const m = /\/ara\/\?q=(.*)$/.exec(u);
+    if (m) return resp(u, searchPage(SUGGEST[decodeURIComponent(m[1])] || []));
+    const d = /\/diziler\/(.+?)-izle\/$/.exec(u);
+    if (d) return resp(u, seriesPage(d[1]));
     if (/-bolum-izle\//.test(u)) return resp(u, '<html>no servers</html>');
     throw new Error('unexpected ' + u);
   };

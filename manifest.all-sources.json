@@ -1,6 +1,6 @@
 {
   "name": "Sinefil Sources",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Sinefil tam kaynak kataloğu (59 benzersiz kaynak, hepsi enabled: true). Ana manifest.json yalnızca ÇizgiMax içerir; tüm kaynakları geri getirmek için bu dosyanın içeriğini manifest.json yapın. Erişilebilirlik/oynatma garantisi değildir.",
   "author": "Sinefil (kaynaklar: SOURCES.json)",
   "scrapers": [
@@ -124,7 +124,7 @@
       "id": "cizgimax-wekmed",
       "name": "CizgiMax",
       "description": "CizgiMax.online üzerinden çizgi film ve anime bölümleri.",
-      "version": "1.0.7",
+      "version": "1.0.8",
       "author": "port: @keyiflerolsun / nuvio: Wekmed",
       "supportedTypes": [
         "tv"
